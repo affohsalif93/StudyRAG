@@ -6,6 +6,7 @@ import Link from "next/link";
 
 import { ChatInput } from "@/components/chat-input";
 import { MessageBubble, type ChatMessage } from "@/components/message-bubble";
+import { ThinkingIndicator } from "@/components/thinking-indicator";
 import { askQuestion, type ChatTurn } from "@/lib/api";
 
 export default function Home() {
@@ -113,7 +114,7 @@ export default function Home() {
           {messages.map((m) => (
             <MessageBubble key={m.id} message={m} />
           ))}
-          {loading && <p className="text-base text-muted-foreground">Thinking…</p>}
+          {loading && <ThinkingIndicator />}
           <div ref={bottomRef} />
         </div>
       </div>
