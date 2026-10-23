@@ -6,6 +6,7 @@ no classes — same style as the rest of studyrag.
 from __future__ import annotations
 
 import sqlite3
+import threading
 from typing import Any
 
 import numpy as np
@@ -191,14 +192,26 @@ def answer_question(
     client = client or get_openai_client()
     memory_facts = load_memory(_memory_store, user_id) if ENABLE_MEMORY else {}
 
-    result = _answer_question_impl(
+    if ENABLE_MEMORY:
+        # Fired off now, not awaited after the answer pipeline below: this
+        # classifier only reads the question + existing facts and writes a
+        # side effect to memory, it never feeds into the answer itself, so
+        # there's no reason every request should pay for it as a sixth
+        # sequential OpenAI round-trip. Runs concurrently with retrieval/
+        # rerank/generation instead -- a request's own SQLiteMemoryStore
+        # writes are thread-safe (fresh sqlite3 connection per call, see
+        # memory/store.py), and a lost race against a near-simultaneous
+        # follow-up question is an acceptable tradeoff for this project's
+        # scope (single demo user, not a correctness-critical path).
+        threading.Thread(
+            target=_maybe_remember,
+            args=(question, user_id, memory_facts, client, model),
+            daemon=True,
+        ).start()
+
+    return _answer_question_impl(
         question, vectors, metadata, memory_facts, history, k, client, model, conn, retrieval_mode, user_id, source_filter
     )
-
-    if ENABLE_MEMORY:
-        _maybe_remember(question, user_id, memory_facts, client, model)
-
-    return result
 
 
 def _answer_question_impl(
