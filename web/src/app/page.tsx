@@ -120,7 +120,7 @@ export default function Home() {
       </div>
 
       <div className="px-4 pt-2 pb-4">
-        <div className="mx-auto max-w-2xl">
+        <div className="mx-auto max-w-2xl space-y-3">
           <ChatInput
             value={input}
             onChange={setInput}
@@ -128,6 +128,14 @@ export default function Home() {
             onKeyDown={handleKeyDown}
             loading={loading}
           />
+          <div className="flex justify-center gap-4 text-sm text-muted-foreground">
+            <Link href="/quiz" className="underline hover:text-foreground">
+              Find electives for my goal
+            </Link>
+            <Link href="/graph" className="underline hover:text-foreground">
+              Explore the prerequisite graph
+            </Link>
+          </div>
         </div>
       </div>
     </div>
