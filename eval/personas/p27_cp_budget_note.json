@@ -1,0 +1,26 @@
+{
+  "id": "p27_cp_budget_note",
+  "name": "Says they still need 100 CP, software engineering track",
+  "description": "First persona to exercise the CP-budget note (step 4/8, wired 2026-10-20). Software engineering's own 6 modules total 36 CP (6 modules times 6 ECTS, verified against the real recommend() output before writing this) -- far short of a stated 100 CP remaining, so the note must say this track alone doesn't cover it. Informational only: no module is excluded on this basis, since one track was never meant to be the student's entire remaining elective plan on its own (same framing rule_check.py's own area-requirement projection already uses).",
+  "profile": {
+    "interests": ["building_software"],
+    "sub_areas": [],
+    "targets": [
+      {"job_title": "Software Engineer", "track_id": "software_engineering", "sector": "industry", "certainty": "decided"}
+    ],
+    "progress": {"passed": [], "current": [], "failed_or_not_taken": []},
+    "constraints": {"cp_missing_total": 100}
+  },
+  "expect": {
+    "core": ["1215684", "1216957", "1235068"],
+    "complementary": ["1212330", "1211978"],
+    "nice_to_have": ["1212349"],
+    "excluded": [],
+    "foundation_first_warnings_empty": true,
+    "cp_budget": {
+      "total_recommended_cp": 36.0,
+      "cp_missing_total": 100,
+      "covers_remaining": false
+    }
+  }
+}

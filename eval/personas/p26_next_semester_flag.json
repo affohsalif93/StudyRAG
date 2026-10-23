@@ -1,0 +1,31 @@
+{
+  "id": "p26_next_semester_flag",
+  "name": "Planning for next summer semester, cybersecurity track",
+  "description": "First persona to exercise the next-semester 'probably not offered' flag (step 4, wired 2026-10-20). Never excludes a module -- only flags it, since the handbook's own cycle data is a stated pattern, not a guarantee. 'Advanced Network Security' (winter) and 'Communication Systems Engineering' (winter) must flag true when the student says next semester is summer; 'IT-Security 1/2' (both) must stay false; 'Industrial Network/Data Security' (irregular) must also stay false -- an irregular cycle is genuinely unknown, not a mismatch, and must never be guessed into a flag.",
+  "profile": {
+    "interests": ["security"],
+    "sub_areas": [],
+    "targets": [
+      {"job_title": "Security Engineer", "track_id": "cybersecurity", "sector": "industry", "certainty": "decided"}
+    ],
+    "progress": {"passed": [], "current": [], "failed_or_not_taken": []},
+    "constraints": {"next_semester": "summer"}
+  },
+  "expect": {
+    "core": ["1211901", "1211900", "1230527"],
+    "complementary": ["1227956", "1231539", "1212349"],
+    "nice_to_have": ["1235068", "1212330"],
+    "excluded": [],
+    "foundation_first_warnings_empty": true,
+    "expected_not_offered_next_semester": {
+      "1211901": false,
+      "1211900": false,
+      "1230527": true,
+      "1227956": false,
+      "1231539": false,
+      "1212349": true,
+      "1235068": true,
+      "1212330": false
+    }
+  }
+}

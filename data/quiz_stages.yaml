@@ -1,0 +1,157 @@
+# The quiz's single source of truth. Served as-is via GET /quiz/schema;
+# the frontend renders a generic step wizard from it rather than
+# hand-coded per-stage UI.
+#
+# Every Stage-1 interest except "not_sure" (deliberately a catch-all,
+# not a goal) has a real sub_area/job_title branch: "building_software"
+# (software_engineering), "security" (cybersecurity), "machine_learning"
+# (machine_learning_engineer), "scientific_computing"
+# (scientific_computing), "data_systems" (data_engineering), "networks"
+# (distributed_systems), "theory" (theoretical_computer_science),
+# "graphics_hci" (graphics_and_hci), and "embedded" (embedded_systems).
+
+stages:
+  - id: interest
+    title: "What pulls you?"
+    type: multi_select
+    max_select: 3
+    skip_allowed: true
+    options:
+      - {value: building_software, label: "Building software (design, languages, tools, quality)"}
+      - {value: machine_learning, label: "Machine learning and data science"}
+      - {value: data_systems, label: "Data systems and databases"}
+      - {value: networks, label: "Networks, communication and distributed systems"}
+      - {value: security, label: "Security"}
+      - {value: theory, label: "Theory (logic, algorithms, complexity, formal methods)"}
+      - {value: scientific_computing, label: "Scientific and mathematical computing"}
+      - {value: graphics_hci, label: "Graphics, vision and human-computer interaction"}
+      - {value: embedded, label: "Embedded, real-time and hardware-near systems"}
+      - {value: not_sure, label: "Not sure yet"}
+
+  - id: sub_area
+    title: "Which part of that pulls you most?"
+    type: multi_select
+    skip_allowed: true
+    depends_on: interest
+    branches:
+      building_software:
+        options:
+          - {value: large_systems, label: "Large systems and architecture"}
+          - {value: languages_compilers, label: "Programming languages and compilers"}
+          - {value: testing_verification, label: "Testing, verification and program analysis"}
+          - {value: model_driven, label: "Model-driven development"}
+          - {value: scientific_software, label: "Scientific and mathematical software"}
+      security:
+        options:
+          - {value: network_security, label: "Network and infrastructure security"}
+          - {value: cryptography, label: "Cryptography and secure protocols"}
+          - {value: security_analysis, label: "Vulnerability analysis and secure code review"}
+          - {value: industrial_ot_security, label: "Industrial and OT security"}
+      machine_learning:
+        options:
+          - {value: supervised_learning, label: "Supervised learning and deep learning"}
+          - {value: reinforcement_learning, label: "Reinforcement learning and control"}
+          - {value: ai_reasoning, label: "AI reasoning, planning and knowledge representation"}
+          - {value: ml_data_infrastructure, label: "ML data infrastructure and systems"}
+      scientific_computing:
+        options:
+          - {value: numerical_methods, label: "Numerical methods and differential equations"}
+          - {value: scientific_software_design, label: "Software design and correctness for scientific code"}
+          - {value: optimization, label: "Optimization and combinatorial scientific computing"}
+      data_systems:
+        options:
+          - {value: database_internals, label: "Database systems and engine internals"}
+          - {value: data_pipelines, label: "Data pipelines and streaming"}
+          - {value: big_data, label: "Big data and distributed data processing"}
+          - {value: data_visualization, label: "Data visualization"}
+      networks:
+        options:
+          - {value: distributed_systems_theory, label: "Distributed systems theory"}
+          - {value: network_protocols, label: "Network protocols and communication systems"}
+          - {value: parallel_computing, label: "Parallel and data-centric computing"}
+      theory:
+        options:
+          - {value: algorithms_complexity, label: "Algorithms and complexity theory"}
+          - {value: formal_logic, label: "Formal logic and logic programming"}
+          - {value: automata_theory, label: "Automata theory and game theory"}
+      graphics_hci:
+        options:
+          - {value: computer_graphics, label: "Computer graphics and rendering"}
+          - {value: computer_vision, label: "Computer vision"}
+          - {value: interaction_design, label: "Interaction design and HCI"}
+      embedded:
+        options:
+          - {value: embedded_programming, label: "Embedded and microcontroller programming"}
+          - {value: real_time_systems, label: "Real-time systems"}
+          - {value: robotics_sensors, label: "Robotics and sensor systems"}
+    fallback_message: "Only the Software engineer, Cybersecurity, Machine learning engineer, Scientific/mathematical software engineer, Data engineer, Distributed systems engineer, Theoretical computer scientist, Graphics and HCI engineer, and Embedded systems engineer tracks are built so far in this demo — other interests don't have sub-areas yet."
+
+  - id: work_style
+    title: "How do you like to work?"
+    type: work_style
+    skip_allowed: true
+    questions:
+      - {id: theory_vs_practice, prompt: "Proofs and theory, or building and running things?", scale: [1, 5], scale_labels: ["All theory", "All practice"]}
+      - {id: favorite_work, prompt: "Which work sounds best?", options: [design_big_picture, optimize_for_speed, find_whats_broken, analyze_data, research]}
+      - {id: exam_format_pref, prompt: "Do you prefer written exams, oral exams, labs or seminars?", options: [written, oral, lab, seminar]}
+
+  - id: job_title
+    title: "What's the goal?"
+    type: job_title
+    depends_on: interest
+    branches:
+      building_software:
+        titles:
+          - {track_id: software_engineering, job_title: "Software engineer", day_in_the_life: "Designs and builds software systems, makes architecture decisions, reviews code, balances technical debt against delivery speed."}
+      security:
+        titles:
+          - {track_id: cybersecurity, job_title: "Security engineer", day_in_the_life: "Secures networks and systems, assesses vulnerabilities, responds to incidents, and balances security controls against usability and cost."}
+      machine_learning:
+        titles:
+          - {track_id: machine_learning_engineer, job_title: "Machine learning engineer", day_in_the_life: "Builds, trains, and ships ML models, designs data pipelines, and balances model accuracy against latency, cost, and maintainability."}
+      scientific_computing:
+        titles:
+          - {track_id: scientific_computing, job_title: "Scientific and mathematical software engineer", day_in_the_life: "Builds and maintains numerical simulation and scientific-computing software, balancing mathematical correctness against performance and maintainability."}
+      data_systems:
+        titles:
+          - {track_id: data_engineering, job_title: "Data engineer", day_in_the_life: "Builds and operates the pipelines and database systems that move and store an organization's data, balancing correctness and freshness against cost and scale."}
+      networks:
+        titles:
+          - {track_id: distributed_systems, job_title: "Distributed systems engineer", day_in_the_life: "Designs systems that run across many machines, reasoning about consistency, failure, and network partitions as a matter of course, not an edge case."}
+      theory:
+        titles:
+          - {track_id: theoretical_computer_science, job_title: "Theoretical computer scientist", day_in_the_life: "Works on the formal foundations of computation itself — algorithms, complexity, logic — usually in a research or PhD setting rather than industry."}
+      graphics_hci:
+        titles:
+          - {track_id: graphics_and_hci, job_title: "Graphics and HCI engineer", day_in_the_life: "Builds the rendering, vision, and interaction systems that let people see and work with computed content, balancing visual/interactive quality against real-time performance."}
+      embedded:
+        titles:
+          - {track_id: embedded_systems, job_title: "Embedded systems engineer", day_in_the_life: "Builds software that runs directly on hardware with real timing and resource constraints, balancing correctness against power, memory, and real-time deadlines."}
+    fallback_message: "Only the Software engineer, Cybersecurity, Machine learning engineer, Scientific/mathematical software engineer, Data engineer, Distributed systems engineer, Theoretical computer scientist, Graphics and HCI engineer, and Embedded systems engineer tracks are built so far in this demo."
+    follow_up:
+      - {id: sector, prompt: "Where: industry, startup, research institute, or further study (PhD)?", options: [industry, startup, research, phd]}
+      - {id: certainty, prompt: "How sure are you?", options: [exploring, leaning, decided]}
+
+  - id: skills
+    title: "What do you already know?"
+    type: skills
+    source: track_skills
+    levels: [never_seen, know_basics, comfortable, strong]
+
+  - id: progress
+    title: "Your academic progress"
+    type: progress
+
+  - id: constraints
+    title: "Constraints"
+    type: constraints
+    fields:
+      - {id: cp_missing_total, prompt: "How many CP do you still need in total?", input: number}
+      - {id: language, prompt: "Language of teaching", input: multi_select, options: [en, de]}
+      - {id: semesters_left, prompt: "Semesters left", input: number}
+      - {id: next_semester, prompt: "Next semester starts", input: single_select, options: [winter, summer]}
+      - {id: exam_formats_avoid, prompt: "Exam formats to avoid, if any (a module offering an alternative isn't excluded)", input: multi_select, options: [written, oral, lab, seminar]}
+
+  - id: summary
+    title: "Does this look right?"
+    type: summary

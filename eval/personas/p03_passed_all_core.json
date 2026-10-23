@@ -1,0 +1,38 @@
+{
+  "id": "p03_passed_all_core",
+  "name": "Already passed every core module",
+  "description": "A student further along who already passed all three core modules. Tests multiple simultaneous exclusions: core must come back empty and excluded must list exactly those three, while complementary/nice_to_have are untouched.",
+  "profile": {
+    "interests": ["software_engineering"],
+    "sub_areas": [],
+    "targets": [
+      {"job_title": "Software Engineer", "track_id": "software_engineering", "sector": "industry", "certainty": "decided"}
+    ],
+    "progress": {
+      "passed": [
+        {"module_id": "1215684", "grade": 2.0},
+        {"module_id": "1216957", "grade": 1.3},
+        {"module_id": "1235068", "grade": 2.3}
+      ],
+      "current": [],
+      "failed_or_not_taken": []
+    }
+  },
+  "expect": {
+    "core": [],
+    "complementary": ["1212330", "1211978"],
+    "nice_to_have": ["1212349"],
+    "excluded": [
+      {"module_id": "1215684", "reason": "already passed"},
+      {"module_id": "1216957", "reason": "already passed"},
+      {"module_id": "1235068", "reason": "already passed"}
+    ],
+    "foundation_first_warnings_empty": true,
+    "rule_check": {
+      "cp_by_area": {"theoretical_cs": 18.0, "software_methods_tools": 12.0, "hw_sw_systems": 6.0},
+      "area_requirement_satisfied": false,
+      "early_master_cap_applies": false
+    }
+  },
+  "note_to_reader": "Same combined CP-by-area totals as p01 -- passed + recommended always covers the same 6 track modules, just split differently, which is itself a useful invariant this persona checks: passed-module CP has to feed the area tally correctly, not just recommended-module CP."
+}

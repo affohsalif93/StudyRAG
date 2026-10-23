@@ -1,0 +1,35 @@
+{
+  "id": "p12_cybersecurity_clean_slate",
+  "name": "Clean-slate student, cybersecurity track",
+  "description": "First persona targeting the second real track (cybersecurity), added when that track was built. Proves the engine generalizes to a second track's real data without any track-specific code: nothing passed, industry lean, no language constraint. 7 of the track's 8 modules are English-only in the real DB (only Static Program Analysis is de_en) -- a real difference from software_engineering's more mixed languages, not something this persona needs a language constraint to reveal, just worth noting. Industry lean tags every non-theoretical_cs module 'up' and Static Program Analysis (theoretical_cs) 'down', but produces no visible reorder in any layer here, since every layer already either ties or already has its 'up' modules first -- the mirror of software_engineering's p01, where industry lean did visibly reorder.",
+  "profile": {
+    "interests": ["security"],
+    "sub_areas": [],
+    "targets": [
+      {"job_title": "Security Engineer", "track_id": "cybersecurity", "sector": "industry", "certainty": "decided"}
+    ],
+    "progress": {"passed": [], "current": [], "failed_or_not_taken": []}
+  },
+  "expect": {
+    "core": ["1211901", "1211900", "1230527"],
+    "complementary": ["1227956", "1231539", "1212349"],
+    "nice_to_have": ["1235068", "1212330"],
+    "excluded": [],
+    "foundation_first_warnings_empty": true,
+    "rule_check": {
+      "cp_by_area": {"theoretical_cs": 6.0, "software_methods_tools": 6.0, "hw_sw_systems": 30.0, "ai_data": 6.0},
+      "area_requirement_satisfied": false,
+      "early_master_cap_applies": false
+    },
+    "weights": {
+      "1211901": "up",
+      "1211900": "up",
+      "1230527": "up",
+      "1227956": "up",
+      "1231539": "up",
+      "1212349": "up",
+      "1235068": "up",
+      "1212330": "down"
+    }
+  }
+}

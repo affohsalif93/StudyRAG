@@ -1,0 +1,26 @@
+{
+  "id": "p02_passed_one_core",
+  "name": "Already passed one core module",
+  "description": "Passed 'Foundations of Functional Programming' earlier in the degree. It should disappear from core and show up in excluded with reason 'already passed' -- everything else unaffected.",
+  "profile": {
+    "interests": ["software_engineering"],
+    "sub_areas": [],
+    "targets": [
+      {"job_title": "Software Engineer", "track_id": "software_engineering", "sector": "industry", "certainty": "decided"}
+    ],
+    "progress": {
+      "passed": [{"module_id": "1215684", "grade": 1.7}],
+      "current": [],
+      "failed_or_not_taken": []
+    }
+  },
+  "expect": {
+    "core": ["1216957", "1235068"],
+    "complementary": ["1212330", "1211978"],
+    "nice_to_have": ["1212349"],
+    "excluded": [
+      {"module_id": "1215684", "reason": "already passed"}
+    ],
+    "foundation_first_warnings_empty": true
+  }
+}

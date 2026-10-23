@@ -1,0 +1,34 @@
+{
+  "id": "p13_cybersecurity_german_only",
+  "name": "German-taught modules only, cybersecurity track",
+  "description": "Constraint: can only take modules taught in German. Unlike software_engineering (where a German-only constraint still leaves a thin but real plan), this track is almost entirely English-taught in the real DB -- 7 of its 8 modules are excluded, leaving only 'Static Program Analysis' (de_en, nice-to-have). A real, honest finding about this track's current language mix, not a bug: checked against the actual engine before writing this persona.",
+  "profile": {
+    "interests": ["security"],
+    "sub_areas": [],
+    "targets": [
+      {"job_title": "Security Engineer", "track_id": "cybersecurity", "sector": "industry", "certainty": "decided"}
+    ],
+    "progress": {"passed": [], "current": [], "failed_or_not_taken": []},
+    "constraints": {"language": ["de"]}
+  },
+  "expect": {
+    "core": [],
+    "complementary": [],
+    "nice_to_have": ["1212330"],
+    "excluded": [
+      {"module_id": "1211901", "reason": "language (en) doesn't match ['de']"},
+      {"module_id": "1211900", "reason": "language (en) doesn't match ['de']"},
+      {"module_id": "1230527", "reason": "language (en) doesn't match ['de']"},
+      {"module_id": "1227956", "reason": "language (en) doesn't match ['de']"},
+      {"module_id": "1231539", "reason": "language (en) doesn't match ['de']"},
+      {"module_id": "1212349", "reason": "language (en) doesn't match ['de']"},
+      {"module_id": "1235068", "reason": "language (en) doesn't match ['de']"}
+    ],
+    "foundation_first_warnings_empty": true,
+    "rule_check": {
+      "cp_by_area": {"theoretical_cs": 6.0},
+      "area_requirement_satisfied": false,
+      "early_master_cap_applies": false
+    }
+  }
+}

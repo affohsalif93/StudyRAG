@@ -1,0 +1,25 @@
+{
+  "id": "p18_distributed_systems_clean_slate",
+  "name": "Clean-slate student, distributed systems track",
+  "description": "Sixth track added in the 'full collection' pass. No internal hard prerequisite edges (two real *recommended*/soft ones exist from modules outside this track -- High-Performance Computing and Advanced Internet Technology -- correctly not triggering a warning). The most area-balanced track yet: spans 4 of the 5 areas, with 2 (hw_sw_systems, software_methods_tools) clearing the 12 CP minimum -- still short of the needed 3.",
+  "profile": {
+    "interests": ["networks"],
+    "sub_areas": [],
+    "targets": [
+      {"job_title": "Distributed Systems Engineer", "track_id": "distributed_systems", "sector": "industry", "certainty": "decided"}
+    ],
+    "progress": {"passed": [], "current": [], "failed_or_not_taken": []}
+  },
+  "expect": {
+    "core": ["1231551", "1212349", "1216838"],
+    "complementary": ["1215722", "1212347"],
+    "nice_to_have": ["1230527", "1226006"],
+    "excluded": [],
+    "foundation_first_warnings_empty": true,
+    "rule_check": {
+      "cp_by_area": {"ai_data": 4.0, "hw_sw_systems": 18.0, "software_methods_tools": 12.0, "theoretical_cs": 6.0},
+      "area_requirement_satisfied": false,
+      "early_master_cap_applies": false
+    }
+  }
+}

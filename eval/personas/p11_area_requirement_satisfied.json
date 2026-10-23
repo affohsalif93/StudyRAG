@@ -1,0 +1,29 @@
+{
+  "id": "p11_area_requirement_satisfied",
+  "name": "Already has real coverage in a third area",
+  "description": "Passed 'Embedded Systems' (module_id 1215690, area hw_sw_systems, 6 ECTS, real DB data) -- a module outside this track entirely. Combined with the track's one hw_sw_systems module ('Communication Systems Engineering', 6 ECTS), that area now also clears the 12 CP minimum, so this is the one persona in the suite where the PO's 3-area/12-CP/theoretical_cs rule should actually come back satisfied -- proving the 'satisfied: true' path isn't dead code, not just that 'not satisfied' always fires.",
+  "profile": {
+    "interests": ["software_engineering"],
+    "sub_areas": [],
+    "targets": [
+      {"job_title": "Software Engineer", "track_id": "software_engineering", "sector": "industry", "certainty": "decided"}
+    ],
+    "progress": {
+      "passed": [{"module_id": "1215690", "grade": 1.7}],
+      "current": [],
+      "failed_or_not_taken": []
+    }
+  },
+  "expect": {
+    "core": ["1215684", "1216957", "1235068"],
+    "complementary": ["1212330", "1211978"],
+    "nice_to_have": ["1212349"],
+    "excluded": [],
+    "foundation_first_warnings_empty": true,
+    "rule_check": {
+      "cp_by_area": {"theoretical_cs": 18.0, "software_methods_tools": 12.0, "hw_sw_systems": 12.0},
+      "area_requirement_satisfied": true,
+      "early_master_cap_applies": false
+    }
+  }
+}

@@ -1,0 +1,117 @@
+# "Computer Vision 2" has a genuine hard RECOMMENDED_BEFORE edge from
+# "Computer Vision" -- the same "Advanced X"/"X 2" naming pattern seen
+# elsewhere. "Designing Interactive Systems II"'s `content` text says it
+# builds on part I, but its formal prerequisites field literally says
+# "None", so no graph edge was extracted for it -- a real inconsistency
+# in the handbook's own text, not a parsing miss.
+
+track_id: graphics_and_hci
+title: Graphics and HCI engineer
+
+skills_weighted:
+  - skill: computer_graphics_and_rendering
+    weight: 2
+    evidence: "2 of 4 postings explicitly ask for rendering/graphics engine work -- a very small sample, see skills_weighted_methodology"
+  - skill: human_computer_interaction_design
+    weight: 1
+    evidence: "1 of 4 postings explicitly touches HCI/interaction design"
+  - skill: computer_vision
+    weight: 2
+    evidence: "2 of 4 postings explicitly ask for computer vision work"
+
+skills_weighted_methodology: >
+  weight = round((count / 4) * 5), the same 1-5 scale as every other
+  track, but n=4 is the smallest sample in this project after
+  scientific_computing's n=3 and deserves the same reduced confidence.
+  Despite ~15 search queries and ~25 fetch attempts across "Graphics
+  Engineer", "Computer Vision Engineer", "Rendering Engineer", "HCI
+  Researcher/Engineer", and "UX Engineer" titles, only 4 postings had
+  real, fetchable description text -- most leads were board *index*
+  pages listing only a title with no description (Hellbender, RoboForce,
+  Absurd Ventures, Whalar, 2K's main board, Cloud Chamber -- excluded,
+  not counted from a title alone), already closed (Bit Reactor,
+  PackageX), or 404. A real, honest structural finding, not just a
+  sample-size caveat: no single posting in this small sample covered all
+  three skills at once -- 2 were pure graphics/rendering (game studios),
+  2 were pure computer-vision/perception (robotics/AI), and only 1
+  touched HCI at all -- suggesting graphics, vision, and HCI are usually
+  separate job functions in practice, not one combined role, which is
+  worth knowing when reading this track's numbers, not just a weakness
+  to apologize for.
+skills_weighted_sources:
+  - {company: "Visual Concepts (2K)", title: "Graphics Engineer", url: "https://job-boards.greenhouse.io/visualconcepts/jobs/7778404003"}
+  - {company: Hark, title: "Graphics Engineer", url: "https://job-boards.greenhouse.io/hark/jobs/4420419009"}
+  - {company: Metropolis, title: "Senior Machine Learning Engineer, Computer Vision", url: "https://job-boards.greenhouse.io/metropolis/jobs/7738229003"}
+  - {company: "Figure AI", title: "Helix AI Engineer, Perception", url: "https://job-boards.greenhouse.io/figureai/jobs/4007375006"}
+
+core:
+  - module: "Computer Graphics"
+    module_id: "1212310"
+    ects: 6.0
+    area: visual_computing_interaction
+    reason: "Geometry representations, local illumination, and rendering foundations -- the core computational-graphics skill set this track is named for."
+  - module: "Computer Vision"
+    module_id: "1215724"
+    ects: 6.0
+    area: visual_computing_interaction
+    reason: "Image processing, segmentation, object recognition, and 3D reconstruction -- the vision half of the track's own name."
+  - module: "Designing Interactive Systems I"
+    module_id: "1215698"
+    ects: 6.0
+    area: visual_computing_interaction
+    reason: "Human-computer interaction and user-interface design fundamentals -- the HCI half of the track, distinct from the two graphics/vision modules above."
+
+complementary:
+  - module: "Designing Interactive Systems II"
+    module_id: "1215699"
+    ects: 6.0
+    area: visual_computing_interaction
+    reason: "Interactive multimedia systems, following on from Designing Interactive Systems I's own foundations per its content description (though its formal prerequisite fields state none)."
+  - module: "Computer Vision 2"
+    module_id: "1211921"
+    ects: 6.0
+    area: visual_computing_interaction
+    reason: "Object tracking, recursive Bayesian filtering, and SLAM -- a real hard prerequisite on Computer Vision in the prerequisite graph, not just a naming convention."
+  - module: "Virtual Reality"
+    module_id: "1211909"
+    ects: 6.0
+    area: visual_computing_interaction
+    reason: "Simulating virtual environments -- a direct, practical application combining this track's graphics and interaction foundations."
+
+nice_to_have:
+  - module: "Physically-Based Animation"
+    module_id: "1215862"
+    ects: 6.0
+    area: visual_computing_interaction
+    reason: "Particle systems, rigid bodies, and deformable-solid simulation -- a specialized graphics topic, not central to the core three."
+  - module: "CSCW and Groupware: Concepts and Systems for Computer Supported Cooperative Work"
+    module_id: "1215691"
+    ects: 4.0
+    area: visual_computing_interaction
+    reason: "Supporting cooperative work between multiple people through software -- a real HCI specialization beyond single-user interface design."
+
+# Not taught by any MSInf elective -- these modules teach graphics/
+# vision/HCI theory and algorithms, not the specific production tooling
+# a working graphics or HCI engineer uses daily. Evidence: live O*NET
+# OnLine pages for two real, closely-related occupations (CC BY 4.0 --
+# see data/onet/ATTRIBUTION.md) since neither alone covers both halves
+# of this track -- 15-1255.00 "Web and Digital Interface Designers" for
+# the HCI/interaction-design half, 27-1014.00 "Special Effects Artists
+# and Animators" for the graphics/3D half.
+practical_skills:
+  - skill: interactive_prototyping_tools
+    why: "Designing Interactive Systems I/II teach HCI theory and design principles; actually prototyping a real interface in industry-standard tooling is a separate, practical skill."
+    evidence: "Figma is the top-ranked In Demand skill for Web and Digital Interface Designers, appearing in 37% of 2025 US job postings (O*NET 15-1255.00, Lightcast data)."
+    learn_more_url: "https://www.onetonline.org/link/demand/15-1255.00"
+  - skill: frontend_web_implementation
+    why: "No MSInf module teaches actually implementing an interactive system in a browser -- Designing Interactive Systems stays at the design/theory level."
+    evidence: "CSS, JavaScript, and HTML are each In Demand for Web and Digital Interface Designers, appearing in 20%, 19%, and 17% of 2025 US job postings respectively (O*NET 15-1255.00)."
+    learn_more_url: "https://www.onetonline.org/link/demand/15-1255.00"
+  - skill: 3d_content_creation_tools
+    why: "Computer Graphics and Physically-Based Animation teach the underlying math and algorithms; building and animating real 3D assets in an industry-standard tool is a separate, practical skill."
+    evidence: "Autodesk Maya is In Demand for Special Effects Artists and Animators, appearing in 15% of 2025 US job postings (O*NET 27-1014.00)."
+    learn_more_url: "https://www.onetonline.org/link/demand/27-1014.00"
+  - skill: real_time_rendering_engines
+    why: "Virtual Reality teaches simulation methods academically; shipping an actual real-time interactive experience runs on a real game/rendering engine no module covers."
+    evidence: "Unreal Engine and Unity are each In Demand for Special Effects Artists and Animators, appearing in 7% and 6% of 2025 US job postings respectively (O*NET 27-1014.00)."
+    learn_more_url: "https://www.onetonline.org/link/demand/27-1014.00"

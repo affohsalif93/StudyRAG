@@ -1,0 +1,27 @@
+{
+  "id": "p20_graphics_hci_clean_slate",
+  "name": "Clean-slate student, graphics and HCI track",
+  "description": "Eighth track, and the third real (non-spurious) foundation-first warning in this suite: 'Computer Vision 2' has a genuine hard RECOMMENDED_BEFORE edge from 'Computer Vision' -- same 'Advanced X'/'X 2' naming pattern as machine_learning_engineer's Advanced Machine Learning and scientific_computing's Numerical Analysis III/IV. 'Designing Interactive Systems II' deliberately does NOT warn despite its content text describing a dependency on DIS I -- its own prerequisites/recommended_requirements fields literally say 'None', checked directly, and the extraction correctly only reads those formal fields. Single-area concentration again: all 8 modules are visual_computing_interaction.",
+  "profile": {
+    "interests": ["graphics_hci"],
+    "sub_areas": [],
+    "targets": [
+      {"job_title": "Graphics and HCI Engineer", "track_id": "graphics_and_hci", "sector": "industry", "certainty": "decided"}
+    ],
+    "progress": {"passed": [], "current": [], "failed_or_not_taken": []}
+  },
+  "expect": {
+    "core": ["1212310", "1215724", "1215698"],
+    "complementary": ["1215699", "1211921", "1211909"],
+    "nice_to_have": ["1215862", "1215691"],
+    "excluded": [],
+    "expected_foundation_first_warnings": {
+      "1211921": ["1215724"]
+    },
+    "rule_check": {
+      "cp_by_area": {"visual_computing_interaction": 46.0},
+      "area_requirement_satisfied": false,
+      "early_master_cap_applies": false
+    }
+  }
+}

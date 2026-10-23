@@ -1,0 +1,25 @@
+# O*NET data attribution
+
+This directory includes information from the O*NET 31.0 Database, filtered to occupation `15-1252.00` (Software Developers) — `knowledge_software_developers.csv`, `skills_software_developers.csv`, and `technology_skills_software_developers.csv` are subsets of the full database's `knowledge.csv`, `essential_skills.csv`, and `software_skills.csv` tables, downloaded from https://www.onetcenter.org/database.html.
+
+O*NET™ is a trademark of the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA). Used under the [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/).
+
+**Modifications**: StudyRAG has filtered these files to a single occupation code and used the `technology_skills_software_developers.csv` file (specifically, rows flagged `Hot Technology = Y` and `In Demand = Y`) to derive the `practical_skills` section of `data/tracks/software_engineering.yaml` — grouping related technologies (e.g. Git and GitHub) under one skill label with original description text, not O*NET's own wording. USDOL/ETA has not approved, endorsed, or tested these modifications.
+
+**`data/tracks/cybersecurity.yaml`'s `practical_skills`** uses occupation `15-1212.00` (Information Security Analysts), but sourced from the live O*NET OnLine website (onetonline.org) rather than a downloaded database file — no CSV for this occupation exists in this directory. Confirmed directly before using it: onetonline.org's own license page states its content is licensed under CC BY 4.0 (same as the downloadable database), distinct from O*NET's separate, more restrictive Web Services API that this project deliberately avoided (see studyrag-decisions-log.md). Pages fetched: `https://www.onetonline.org/link/summary/15-1212.00`, `https://www.onetonline.org/link/hot_tech/15-1212.00`, `https://www.onetonline.org/link/demand/15-1212.00` — the percentages cited in the track file (e.g. "Firewall software... 18% of 2025 US job postings") are O*NET's own Lightcast-sourced job-posting-frequency data, shown directly on those pages, not computed by this project.
+
+**`data/tracks/machine_learning_engineer.yaml`'s `practical_skills`** uses occupation `15-2051.00` (Data Scientists) — the closest real SOC code to "ML Engineer," which has no dedicated code of its own — same live-page sourcing as above. Page fetched: `https://www.onetonline.org/link/demand/15-2051.00`.
+
+**`data/tracks/scientific_computing.yaml`'s `practical_skills`** uses occupation `15-2021.00` (Mathematicians), after first checking `15-1221.00` (Computer and Information Research Scientists) and finding it almost entirely AI/ML-tooling flavored with no genuine HPC content — a worse fit for this track than for machine_learning_engineer, despite the more ML-sounding occupation title. Mathematicians came closer (MATLAB, C++ both show up as real, in-demand tools) but still has no HPC-specific tooling (MPI, CUDA, SLURM) at all in its own technology-skills data — a real, acknowledged gap in the data source, flagged in the track file rather than papered over. Page fetched: `https://www.onetonline.org/link/demand/15-2021.00`.
+
+**`data/tracks/data_engineering.yaml`'s `practical_skills`** uses occupation `15-1242.00` (Database Administrators and Architects) — same live-page sourcing as above. Page fetched: `https://www.onetonline.org/link/demand/15-1242.00`.
+
+**`data/tracks/distributed_systems.yaml`'s `practical_skills`** uses occupation `15-1241.00` (Computer Network Architects). Page fetched: `https://www.onetonline.org/link/demand/15-1241.00`.
+
+**`data/tracks/theoretical_computer_science.yaml` deliberately has no `practical_skills` section at all.** O*NET's whole methodology is job-posting frequency for a real SOC occupation code, and no real occupation is just "prove theorems about complexity classes" — this is a primarily academic/research path. The closest real occupation checked, `15-1221.00` (Computer and Information Research Scientists, already used more appropriately for machine_learning_engineer), came back almost entirely applied-AI/ML tooling with nothing theory-specific (no proof assistants, no computer algebra systems) in its real data. See that track file's own header comment for the full reasoning — omitting the section was judged more honest than forcing a weak or borrowed one.
+
+**`data/tracks/graphics_and_hci.yaml`'s `practical_skills`** needed two occupations, since neither alone covers both halves of the track: `15-1255.00` (Web and Digital Interface Designers) for the HCI/interaction-design half, and `27-1014.00` (Special Effects Artists and Animators) for the graphics/3D half. Pages fetched: `https://www.onetonline.org/link/demand/15-1255.00`, `https://www.onetonline.org/link/demand/27-1014.00`.
+
+**`data/tracks/embedded_systems.yaml`'s `practical_skills`** uses occupation `17-2061.00` (Computer Hardware Engineers). Page fetched: `https://www.onetonline.org/link/demand/17-2061.00`.
+
+See `studyrag-decisions-log.md` for why O*NET was chosen over roadmap.sh (license incompatibility — roadmap.sh's content is personal-use-only, not open-licensed).

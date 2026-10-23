@@ -1,0 +1,49 @@
+name: Refresh sources
+
+# Scheduled freshness check. Weekly, not daily -- these are official
+# regulation documents that change on the order of months, not days.
+on:
+  schedule:
+    - cron: "0 6 * * 1" # Mondays, 06:00 UTC
+  workflow_dispatch: {} # manual trigger from the Actions tab, for testing
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install poppler-utils
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+
+      - uses: astral-sh/setup-uv@v3
+
+      - name: Install dependencies
+        run: uv sync
+
+      # Raw PDFs are gitignored (large binaries, re-fetchable from their
+      # source URLs — see .gitignore), so a fresh checkout has no "old"
+      # PDF to diff against. Cache them across scheduled runs instead of
+      # committing them; the cache key is tied to sources.json's current
+      # state, so it naturally rolls forward to the latest fetched bytes
+      # after any run that found a real change.
+      - name: Restore cached raw PDFs
+        uses: actions/cache@v4
+        with:
+          path: data/raw/*.pdf
+          key: raw-pdfs-${{ hashFiles('data/raw/sources.json') }}
+          restore-keys: |
+            raw-pdfs-
+
+      - name: Refresh sources
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: uv run python scripts/refresh_sources.py
+
+      - name: Commit change reports and page hashes
+        run: |
+          git config user.name "studyrag-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/raw/sources.json data/raw/page_hashes.json data/raw/change_reports
+          git diff --cached --quiet || git commit -m "Automated source refresh"
+          git push

@@ -1,0 +1,36 @@
+{
+  "id": "p01_clean_slate",
+  "name": "Clean-slate student, industry-leaning",
+  "description": "No modules passed yet, no language constraint, sector='industry' (F56). Baseline case for module presence/layer/reason/area-CP, and also the one persona that proves F56's reordering is real: industry lean pulls the two software_methods_tools core modules ('Software Language Engineering', 'Software Architecture') ahead of the one theoretical_cs core module ('Foundations of Functional Programming'), flipping the track's own authored order. complementary/nice_to_have don't visibly reorder here (complementary is a tie -- both theoretical_cs; nice_to_have has only one module) but still get the correct per-module weight tag.",
+  "profile": {
+    "interests": ["software_engineering"],
+    "sub_areas": [],
+    "targets": [
+      {"job_title": "Software Engineer", "track_id": "software_engineering", "sector": "industry", "certainty": "decided"}
+    ],
+    "progress": {"passed": [], "current": [], "failed_or_not_taken": []}
+  },
+  "expect": {
+    "core": ["1215684", "1216957", "1235068"],
+    "complementary": ["1212330", "1211978"],
+    "nice_to_have": ["1212349"],
+    "excluded": [],
+    "foundation_first_warnings_empty": true,
+    "rule_check": {
+      "cp_by_area": {"theoretical_cs": 18.0, "software_methods_tools": 12.0, "hw_sw_systems": 6.0},
+      "area_requirement_satisfied": false,
+      "early_master_cap_applies": false
+    },
+    "layer_order": {
+      "core": ["1216957", "1235068", "1215684"]
+    },
+    "weights": {
+      "1215684": "down",
+      "1216957": "up",
+      "1235068": "up",
+      "1212330": "down",
+      "1211978": "down",
+      "1212349": "up"
+    }
+  }
+}

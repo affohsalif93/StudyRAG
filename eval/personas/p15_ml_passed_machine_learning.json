@@ -1,0 +1,33 @@
+{
+  "id": "p15_ml_passed_machine_learning",
+  "name": "Already passed Machine Learning",
+  "description": "Direct contrast with p14: once 'Machine Learning' (the real hard prerequisite) is actually passed, 'Advanced Machine Learning''s foundation-first warning must disappear entirely, not just change -- proving the mechanism reacts correctly to passed_ids, not just that it can fire at all. Combined CP-by-area totals stay identical to p14's -- passed + recommended still covers the same modules, just split differently, the same invariant p01/p03 already established for software_engineering.",
+  "profile": {
+    "interests": ["machine_learning"],
+    "sub_areas": [],
+    "targets": [
+      {"job_title": "ML Engineer", "track_id": "machine_learning_engineer", "sector": "industry", "certainty": "decided"}
+    ],
+    "progress": {
+      "passed": [{"module_id": "1215744", "grade": 1.7}],
+      "current": [],
+      "failed_or_not_taken": []
+    }
+  },
+  "expect": {
+    "core": ["1211912", "1234536"],
+    "complementary": ["4026526", "1216860", "1215694"],
+    "nice_to_have": ["1215692", "1231551", "1226146"],
+    "excluded": [
+      {"module_id": "1215744", "reason": "already passed"}
+    ],
+    "expected_foundation_first_warnings": {
+      "1211912": []
+    },
+    "rule_check": {
+      "cp_by_area": {"ai_data": 42.0, "theoretical_cs": 12.0},
+      "area_requirement_satisfied": false,
+      "early_master_cap_applies": false
+    }
+  }
+}

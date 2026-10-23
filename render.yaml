@@ -1,0 +1,43 @@
+# Render Blueprint for the StudyRAG API (studyrag.api.app). Deploys the
+# existing Dockerfile as-is -- the baked-in studyrag.db + chunk index
+# mean this needs no separate data-provisioning step on a fresh service.
+#
+# Secrets (sync: false) are set once in the Render dashboard after the
+# first deploy, never committed here:
+#   OPENAI_API_KEY              -- your OpenAI key
+#   STUDYRAG_NEO4J_URI          -- e.g. neo4j+s://<id>.databases.neo4j.io
+#   STUDYRAG_NEO4J_USER         -- usually "neo4j"
+#   STUDYRAG_NEO4J_PASSWORD     -- set when the Aura instance was created
+#   STUDYRAG_CORS_ORIGINS       -- your deployed Vercel frontend's origin
+
+services:
+  - type: web
+    name: studyrag-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: STUDYRAG_NEO4J_URI
+        sync: false
+      - key: STUDYRAG_NEO4J_USER
+        sync: false
+      - key: STUDYRAG_NEO4J_PASSWORD
+        sync: false
+      - key: STUDYRAG_CORS_ORIGINS
+        sync: false
+    # Only redeploy when something the Docker image actually depends on
+    # changes (see Dockerfile) -- a web/-only commit or a doc-only commit
+    # shouldn't trigger a rebuild.
+    buildFilter:
+      paths:
+        - Dockerfile
+        - render.yaml
+        - pyproject.toml
+        - uv.lock
+        - src/**
+        - scripts/**
+        - data/**

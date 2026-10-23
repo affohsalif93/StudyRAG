@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "question": "How many CP is the Masterarbeit module worth in the Master Informatik program?",
+    "answer": "The Masterarbeit module is worth **30 CP**. [1][2]\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "Both passages [1] and [2] state that the Masterarbeit module is worth 30 CP."
+  },
+  {
+    "id": 2,
+    "question": "In how many of the five Wahlpflicht areas must a Master Informatik student earn at least 12 CP, and which area is mandatory among them?",
+    "answer": "A Master Informatik student must earn at least **12 CP in at least three of the five Wahlpflicht areas**. **Theoretische Informatik** must be one of those areas. [3]\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "Passage [3] requires at least 12 CP in at least three of the five areas and specifies that one must be Theoretische Informatik."
+  },
+  {
+    "id": 3,
+    "question": "What is the maximum CP a Bachelor Informatik student may take as early Master modules, and how far into the Bachelor's must they be before starting?",
+    "answer": "The passages do **not** state a maximum total number of CP or how far into the Bachelor’s degree a student must be before starting early Master modules. The Bachelor’s PO says that Master modules may be taken subject to § 9 ÜPO and provided there is no admission restriction; it excludes the Master’s thesis from the modules that may be chosen [2][5]. But § 9 ÜPO and any CP cap or timing condition are not included here.\n\nFor both points, contact the **Zentrales Prüfungsamt**; the supplied passages aren’t enough to determine the rule. [2][5]\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": false,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "The passages allow certain Master modules subject to § 9 ÜPO and exclude the thesis, but provide no CP maximum or Bachelor’s progress requirement."
+  },
+  {
+    "id": 4,
+    "question": "Does the Bachelor Informatik PO itself state a numeric cap on early master-module CP?",
+    "answer": "No. The Bachelor Informatik PO says early Master modules may be taken under § 9 ÜPO, but it does not itself state a numeric CP cap in the cited passage. [5] The 30 CP cap is stated in the ÜPO, not the Bachelor PO. [2] The separate 30 CP figure in the Bachelor PO concerns striking module grades, not early Master modules. [1]\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "The Bachelor PO passage refers early Master modules to § 9 ÜPO without stating a numeric cap; the 30 CP limit appears in the ÜPO, while the Bachelor PO’s separate 30 CP figure concerns grade deletion."
+  },
+  {
+    "id": 5,
+    "question": "Which document governs the actual CP cap for early master modules — the program-specific PO or the ÜPO?",
+    "answer": "The **ÜPO sets the general 30 CP limit** for the total scope of early Master modules. The program-specific PO determines which modules may be taken early, but passage [1] does not say that it sets a different CP cap. [1]\n\nOne nuance: the ÜPO says the total “**soll** 30 CP nicht überschreiten” (“should not exceed 30 CP”), so these passages alone do not establish whether that wording is an absolute, enforceable ceiling. For a binding interpretation of the limit, contact the **Zentrale Prüfungsamt (ZPA)**. [1]\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "The ÜPO passage sets the 30 CP guideline, while the program-specific PO determines which modules are eligible to be taken early; the answer also appropriately notes the wording “soll.”"
+  },
+  {
+    "id": 6,
+    "question": "What are the office hours of the Fachstudienberatung Informatik?",
+    "answer": "The provided passages do not state the office hours of the Fachstudienberatung Informatik. Please contact the **Zentrales Prüfungsamt** or the responsible chair to ask.\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "The passages do not provide office hours, and the answer appropriately says this information is unavailable and directs the user to ask a responsible office."
+  },
+  {
+    "id": 7,
+    "question": "How many CP is the module 'CSCW and Groupware: Concepts and Systems for Computer Supported Cooperative Work' worth?",
+    "answer": "The provided passages do not state how many CP this module is worth. Passage [1] gives its content and learning objectives, while [3] gives general rules about CP but no value for this specific module. Please contact the **Zentrales Prüfungsamt** or the responsible chair to confirm. [1][3]\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "The passages describe the module but give no CP value for it, so the answer appropriately says this information is unavailable and recommends contacting a responsible office."
+  },
+  {
+    "id": 8,
+    "question": "How many CP is 'Graph Decompositions and Algorithmic Applications' worth?",
+    "answer": "The provided passages do not state how many CP **Graph Decompositions and Algorithmic Applications** is worth. Please check with the **Zentrales Prüfungsamt** or the responsible chair. [1][2]\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "The passages describe the module’s prerequisites and learning objectives but give no CP value, so the answer appropriately says it is not stated."
+  },
+  {
+    "id": 9,
+    "question": "In which semester cycle is 'Capital Budgeting' offered, and in which language is it taught?",
+    "answer": "The provided passage describes Capital Budgeting’s content and learning objectives, but does not state its semester cycle or teaching language. [1] Please contact the Zentrales Prüfungsamt or the responsible chair to confirm.\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "The passages describe Capital Budgeting’s content but do not specify its semester cycle or teaching language, so the answer appropriately says this information is unavailable and recommends contacting the responsible office."
+  },
+  {
+    "id": 10,
+    "question": "In which language(s) is 'Software Architectures' taught?",
+    "answer": "The passages do not specify the language(s) in which **Software Architectures** is taught. They mention programming languages as part of the module content, but not the language of instruction. [2]\n\nPlease contact the **Zentrales Prüfungsamt** or the responsible chair to confirm.\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "The passages do not state the language of instruction, and the answer appropriately says so and recommends confirming with the responsible office or chair."
+  },
+  {
+    "id": 11,
+    "question": "How many CP is 'Knowledge Graphs' worth?",
+    "answer": "The provided passages do not state how many CP “Knowledge Graphs” is worth. Please check with the Zentrales Prüfungsamt or the responsible chair.\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "The passages do not state the CP value for Knowledge Graphs, and the answer appropriately says so and suggests contacting the responsible office or chair."
+  },
+  {
+    "id": 12,
+    "question": "How regularly is 'Research Focus Class on Communication Systems' offered according to the handbook?",
+    "answer": "The passages do not state how regularly the Research Focus Class on Communication Systems is offered; they describe its content and note that Advanced Internet Technology is helpful, but give no offering schedule.[1][2] For the current schedule, contact the responsible chair or the Zentrales Prüfungsamt.\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "The passages do not specify how often the class is offered, and the answer appropriately says so and recommends contacting the responsible chair or examination office."
+  },
+  {
+    "id": 13,
+    "question": "How many CP is 'Fibre-Reinforced Composites' worth?",
+    "answer": "The passages do not state how many CP **Fibre-Reinforced Composites** is worth. Passage [1] describes its content and learning objectives but gives no CP value; passage [4] says CP can vary by module, but does not specify this module’s value. [1][4]\n\nPlease ask the **Zentrales Prüfungsamt** or the responsible chair.\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "The passages give no CP value for Fibre-Reinforced Composites, and the answer appropriately says so and recommends contacting the responsible office or chair."
+  },
+  {
+    "id": 14,
+    "question": "How many CP is 'Discrete Mathematics I' worth?",
+    "answer": "The passages do not state how many CP **Discrete Mathematics I** is worth. They give its prerequisites and content, while [5] sets a minimum CP requirement for subject areas—not the credit value of this course. [1][2][5]\n\nPlease check with the **Zentrales Prüfungsamt** or the responsible chair.\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "The passages describe the course’s prerequisites and content but do not give its CP value, so the answer appropriately says the information is unavailable and advises checking with the responsible office."
+  },
+  {
+    "id": 15,
+    "question": "How many CP is 'Data Stream Management and Analysis' worth?",
+    "answer": "The provided passages do not state how many CP **Data Stream Management and Analysis** is worth. [1][2] Please contact the **Zentrales Prüfungsamt** to confirm.\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "The passages give no CP value for Data Stream Management and Analysis, and the answer appropriately says so and recommends contacting the examination office."
+  },
+  {
+    "id": 16,
+    "question": "What is the maximum page length, excluding appendices, for a written Bachelor's thesis?",
+    "answer": "The Bachelor Informatik Prüfungsordnung 2022 says the written thesis **should not exceed 50 pages, excluding appendices**. [2]\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "Passage [2] states that the written Bachelor's thesis should not exceed 50 pages without appendices."
+  },
+  {
+    "id": 17,
+    "question": "What is the maximum page length, excluding appendices, for a written Master's thesis?",
+    "answer": "The written Master’s thesis should not exceed **80 pages excluding appendices**. The regulation phrases this as a guideline (“should not exceed”), rather than an absolute maximum. [1]\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "Passage [1] states that the written thesis should not exceed 80 pages without appendices, and the answer preserves its guideline wording."
+  },
+  {
+    "id": 18,
+    "question": "In exceptional cases, by how much can the Master's thesis processing time be extended, and under which provision?",
+    "answer": "In an exceptional case, the Master’s thesis processing time can be extended by **up to six weeks**. The Master Informatik Prüfungsordnung 2023 § 13(4) refers to **ÜPO § 17(7)**; that provision allows the extension on a reasoned request to the examination board, with the supervisor’s support. [1][2]\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "The passages state that the Master's thesis period may be extended by up to six weeks under ÜPO § 17(7), as referenced in the Master Informatik examination regulations."
+  },
+  {
+    "id": 19,
+    "question": "In exceptional cases, by how much can the Bachelor's thesis processing time be extended, and under which provision?",
+    "answer": "In a justified exceptional case, the Bachelor’s thesis processing time may be extended by **up to four weeks**. The Bachelor Informatik Prüfungsordnung 2022 § 15(4) says this is on application to the examination board, in accordance with **ÜPO § 17(7)**. Under that ÜPO provision, the extension is considered case by case, on a reasoned application and with the supervisor’s support. [1][2]\n\nThe passages differ on the *usual maximum* processing time: the ÜPO says three months, while the Bachelor Prüfungsordnung 2022 says four months. Both state the same maximum extension of four weeks. [1][2]\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "The passages provide for an extension of up to four weeks under Bachelor Informatik Prüfungsordnung 2022 § 15(4), pursuant to ÜPO § 17(7), which the answer correctly identifies."
+  },
+  {
+    "id": 20,
+    "question": "How is the Master's final grade computed from the individual module grades, and what special weighting applies to the thesis module?",
+    "answer": "The final grade is calculated from the grades of the modules, including the Master’s thesis module, weighted by their associated credit points (CP). [1][2]\n\nThe Master’s thesis module is **not assigned a separate multiplier** in these passages. The specific additional weighting is for the **oral Schwerpunktkolloquium**: its grade counts with four times its credit points. [2] The passages describe the thesis presentation as part of a Master’s colloquium, but do not establish that this is the same as the Schwerpunktkolloquium. [4][2]\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "The passages give CP-weighting generally, specify fourfold weighting for the oral Schwerpunktkolloquium, and do not establish a separate special multiplier for the thesis module."
+  },
+  {
+    "id": 21,
+    "question": "What is the maximum processing time for a Bachelor's thesis, and which document's figure actually applies if two documents give different numbers?",
+    "answer": "For the **Bachelor Informatik**, the applicable figure is **up to four months**: the Bachelor Informatik Prüfungsordnung 2022 sets that duration specifically for the thesis. [1]\n\nThe ÜPO gives a **general three-month** duration for a Bachelor’s thesis, but says that deviations are set by the study-programme-specific examination regulations. So the four-month figure in the Bachelor Informatik PO is the applicable programme-specific rule, rather than a contradiction to resolve by choosing the ÜPO figure. [3][1]\n\nA further extension of **up to four weeks** may be granted in a justified exceptional case, on application to the examination board. [1][3]\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "The answer correctly identifies the Bachelor Informatik programme-specific rule of four months and explains that the ÜPO permits programme-specific deviations, while noting the possible four-week extension."
+  },
+  {
+    "id": 22,
+    "question": "Is there any conflict between documents about the maximum processing time for a Master's thesis?",
+    "answer": "No. The Master Informatik Prüfungsordnung 2023 sets the thesis period at **up to six months**, with a possible extension of **up to six weeks** in justified exceptional cases [1]. The ÜPO also sets the Master’s thesis period at **up to six months** and allows an extension of **up to six weeks** in an exceptional case [2]. The documents agree on those time limits.\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "Both the Master Informatik Prüfungsordnung and the ÜPO specify a six-month maximum and allow an extension of up to six weeks in justified exceptional cases."
+  },
+  {
+    "id": 23,
+    "question": "Which module is explicitly excluded from being taken early as a Master's module by a Bachelor Informatik student?",
+    "answer": "The **“Masterarbeit”** module is explicitly excluded from being taken early as a Master’s module by a Bachelor Informatik student. [1]\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "Passage [1] explicitly excludes the “Masterarbeit” module from those that may be chosen early."
+  },
+  {
+    "id": 24,
+    "question": "What are the opening hours of the RWTH university library?",
+    "answer": "The provided passages do not state the RWTH University Library’s opening hours. For a confirmed answer, contact the **Zentrales Prüfungsamt (ZPA)** or the responsible chair. [1]–[5]\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "The passages do not give library opening hours, and the answer appropriately says so and suggests contacting the ZPA or responsible chair."
+  },
+  {
+    "id": 25,
+    "question": "How much does student housing typically cost near RWTH Aachen?",
+    "answer": "I could not find this in the documents I have access to. Please contact the examination office (Zentrales Prüfungsamt) or the responsible chair.\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "The passages contain no information about student housing costs, so the answer appropriately says it cannot find the information and directs the student to contact a responsible office."
+  },
+  {
+    "id": 26,
+    "question": "Who is the current dean of the Fakultät für Informatik?",
+    "answer": "The passages do not identify the current dean. They say the regulations were issued based on a decision by the Fakultät für Informatik’s founding dean on 16 September 2025, but that does not establish who is dean now. [1][4]\n\nFor the current dean’s name, contact the Zentrales Prüfungsamt or the responsible chair.\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "The passages do not name the current dean, and the answer appropriately says so and suggests contacting a responsible office."
+  },
+  {
+    "id": 27,
+    "question": "What is the deadline to apply for a semester abroad as a Master Informatik student?",
+    "answer": "The provided passages do not state a deadline for applying for a semester abroad. Please contact the **Zentrales Prüfungsamt** or the **responsible chair** to confirm the applicable deadline. [1]–[5]\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "The passages do not give a semester-abroad application deadline, and the answer appropriately directs the student to an examination office or responsible chair."
+  },
+  {
+    "id": 28,
+    "question": "Which code editor do most RWTH computer science students use?",
+    "answer": "I could not find this in the documents I have access to. Please contact the examination office (Zentrales Prüfungsamt) or the responsible chair.\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "The passages do not identify which code editor most RWTH computer science students use, so the answer appropriately says it cannot determine this and suggests contacting a responsible office or chair."
+  },
+  {
+    "id": 29,
+    "question": "What is the current tuition fee for international students in the Master Informatik program?",
+    "answer": "The provided passages do not state the tuition fee for international students in the Master Informatik program. Please contact the **Zentrales Prüfungsamt (ZPA)** to confirm the current fee. [4][5]\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "The passages do not provide a tuition fee, and the answer appropriately says so and suggests contacting the examination office."
+  },
+  {
+    "id": 30,
+    "question": "How do I get a replacement for a lost RWTH student ID card?",
+    "answer": "I could not find this in the documents I have access to. Please contact the examination office (Zentrales Prüfungsamt) or the responsible chair.\n\n---\n*StudyRAG is a demonstration project, not official advice. Verify anything important with the examination office or the responsible chair.*",
+    "keyword_proxy_correct": true,
+    "ai_judge_correct": true,
+    "ai_judge_reason": "The passages do not explain how to replace a lost student ID, and the answer appropriately says so and suggests contacting the examination office or responsible chair."
+  }
+]

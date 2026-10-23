@@ -1,0 +1,24 @@
+{
+  "id": "p09_unrelated_passed_module",
+  "name": "Passed a real module that isn't on this track",
+  "description": "Passed 'Machine Learning' (module_id 1215744), a real module but not part of the software_engineering track at all. Exclusion must be keyed by module_id match against the track's own items, not by having any passed modules at all -- this module must have zero effect on the recommendation.",
+  "profile": {
+    "interests": ["software_engineering"],
+    "sub_areas": [],
+    "targets": [
+      {"job_title": "Software Engineer", "track_id": "software_engineering", "sector": "industry", "certainty": "decided"}
+    ],
+    "progress": {
+      "passed": [{"module_id": "1215744", "grade": 1.0}],
+      "current": [],
+      "failed_or_not_taken": []
+    }
+  },
+  "expect": {
+    "core": ["1215684", "1216957", "1235068"],
+    "complementary": ["1212330", "1211978"],
+    "nice_to_have": ["1212349"],
+    "excluded": [],
+    "foundation_first_warnings_empty": true
+  }
+}

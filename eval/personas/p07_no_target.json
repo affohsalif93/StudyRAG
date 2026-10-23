@@ -1,0 +1,12 @@
+{
+  "id": "p07_no_target",
+  "name": "Quiz abandoned before the job-title stage",
+  "description": "A profile saved before the student ever answered the job-title/track stage (targets is empty). This must hand over with the engine's own documented error message, never a crash or a guessed track.",
+  "profile": {
+    "interests": ["software_engineering"],
+    "sub_areas": [],
+    "targets": [],
+    "progress": {"passed": [], "current": [], "failed_or_not_taken": []}
+  },
+  "expect_error": "No target set in the profile — the job_title stage must be answered first."
+}

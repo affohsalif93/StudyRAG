@@ -1,0 +1,27 @@
+{
+  "id": "p24_weak_skill_notes",
+  "name": "Flagged weak in a skill the track actually names",
+  "description": "First persona to exercise weak-skill notes (step 5, wired 2026-10-20 after the quiz's own skills-rating stage turned out to be collected and never read by the recommender). Flags 'programming_language_concepts' as weak (a real skill name from software_engineering.yaml's own skills_weighted) and 'software_design' as known-strong (weak: false) -- only the first should produce a note, surfacing that skill's real F53 evidence verbatim. Deliberately does NOT assert a specific foundation-first module tied to this skill: the schema has no skill-to-module mapping to test against, a real, documented scoping limit (see engine.py's _weak_skill_notes docstring), not something this persona should pretend to verify.",
+  "profile": {
+    "interests": ["building_software"],
+    "sub_areas": [],
+    "targets": [
+      {"job_title": "Software Engineer", "track_id": "software_engineering", "sector": "industry", "certainty": "decided"}
+    ],
+    "skills": {
+      "programming_language_concepts": {"level": 1, "weak": true},
+      "software_design": {"level": 3, "weak": false}
+    },
+    "progress": {"passed": [], "current": [], "failed_or_not_taken": []}
+  },
+  "expect": {
+    "core": ["1215684", "1216957", "1235068"],
+    "complementary": ["1212330", "1211978"],
+    "nice_to_have": ["1212349"],
+    "excluded": [],
+    "foundation_first_warnings_empty": true,
+    "weak_skill_notes": [
+      {"skill": "programming_language_concepts", "weight": 1}
+    ]
+  }
+}

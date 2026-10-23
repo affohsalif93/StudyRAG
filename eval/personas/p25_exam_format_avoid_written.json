@@ -1,0 +1,24 @@
+{
+  "id": "p25_exam_format_avoid_written",
+  "name": "Avoids written exams, theoretical_computer_science track",
+  "description": "First persona to exercise exam-format exclusion (step 4, wired 2026-10-20). Checked the real examination_terms text before writing this: 'Advanced Algorithmics' and 'Advanced Automata Theory' are both written-exam-only in the real handbook (no oral alternative stated), so avoiding 'written' correctly excludes exactly those two and nothing else -- every other module in this track offers a written-or-oral choice (or an unparseable/unknown format, which must never be excluded on this basis -- the detector is deliberately conservative, see engine.py's _EXAM_FORMAT_PATTERNS comment).",
+  "profile": {
+    "interests": ["theory"],
+    "sub_areas": [],
+    "targets": [
+      {"job_title": "Theoretical Computer Scientist", "track_id": "theoretical_computer_science", "sector": "research", "certainty": "decided"}
+    ],
+    "progress": {"passed": [], "current": [], "failed_or_not_taken": []},
+    "constraints": {"exam_formats_avoid": ["written"]}
+  },
+  "expect": {
+    "core": ["1212331", "1212343"],
+    "complementary": ["1212326", "1212338"],
+    "nice_to_have": ["1212645", "1212654"],
+    "excluded": [
+      {"module_id": "1223638", "reason": "only offered as ['written'] exam(s), which you want to avoid"},
+      {"module_id": "1211981", "reason": "only offered as ['written'] exam(s), which you want to avoid"}
+    ],
+    "foundation_first_warnings_empty": true
+  }
+}

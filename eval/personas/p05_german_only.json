@@ -1,0 +1,30 @@
+{
+  "id": "p05_german_only",
+  "name": "German-taught modules only",
+  "description": "Constraint: can only take modules taught in German. Three of the six track modules are English-only ('en') in the real DB -- 'Foundations of Functional Programming' and 'Software Architecture' (both core) and 'Communication Systems Engineering' (nice-to-have) should all be excluded, leaving a thin recommendation.",
+  "profile": {
+    "interests": ["software_engineering"],
+    "sub_areas": [],
+    "targets": [
+      {"job_title": "Software Engineer", "track_id": "software_engineering", "sector": "industry", "certainty": "leaning"}
+    ],
+    "progress": {"passed": [], "current": [], "failed_or_not_taken": []},
+    "constraints": {"language": ["de"]}
+  },
+  "expect": {
+    "core": ["1216957"],
+    "complementary": ["1212330", "1211978"],
+    "nice_to_have": [],
+    "excluded": [
+      {"module_id": "1215684", "reason": "language (en) doesn't match ['de']"},
+      {"module_id": "1235068", "reason": "language (en) doesn't match ['de']"},
+      {"module_id": "1212349", "reason": "language (en) doesn't match ['de']"}
+    ],
+    "foundation_first_warnings_empty": true,
+    "rule_check": {
+      "cp_by_area": {"theoretical_cs": 12.0, "software_methods_tools": 6.0},
+      "area_requirement_satisfied": false,
+      "early_master_cap_applies": false
+    }
+  }
+}

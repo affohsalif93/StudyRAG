@@ -1,0 +1,14 @@
+{
+  "id": "p08_unknown_track",
+  "name": "Track id with no matching track file",
+  "description": "A target whose track_id doesn't match any file in data/tracks/ (e.g. the quiz offered a role that was never actually curated into a track yet, or a stale/corrupted profile). Found by this suite as a real crash (engine.recommend raised an unhandled FileNotFoundError instead of handing over cleanly, unlike every other lookup in this codebase); fixed in engine.py to return a clear error dict instead, the same honest-failure style as fetch_chair_page/find_thesis_info. This persona now guards against that regressing.",
+  "profile": {
+    "interests": ["data_science"],
+    "sub_areas": [],
+    "targets": [
+      {"job_title": "Data Scientist", "track_id": "data_science", "sector": "industry", "certainty": "exploring"}
+    ],
+    "progress": {"passed": [], "current": [], "failed_or_not_taken": []}
+  },
+  "expect_error": "Unknown track_id 'data_science' — no track file exists for it yet."
+}

@@ -1,0 +1,106 @@
+# No internal hard prerequisite edge among this track's modules.
+#
+# "Intelligent Sensors Systems for Robotic Applications" is
+# `applied_courses` (Mechanical Engineering, not Informatik electives)
+# in the real database -- area is null for the same structural reason
+# scientific_computing's Numerical Analysis III/IV are, and it
+# contributes nothing to the CP/area rule check -- a different PO
+# bucket entirely, not an error.
+
+track_id: embedded_systems
+title: Embedded systems engineer
+
+skills_weighted:
+  - skill: embedded_systems_programming
+    weight: 5
+    evidence: "7 of 7 postings explicitly ask for embedded/firmware programming (C/C++, microcontrollers, SoCs)"
+  - skill: real_time_systems
+    weight: 4
+    evidence: "5 of 7 postings explicitly ask for real-time embedded software or RTOS/bare-metal experience"
+  - skill: hardware_software_co_design
+    weight: 4
+    evidence: "5 of 7 postings explicitly ask for hands-on hardware/software integration (PCB schematics, hardware bring-up, oscilloscopes/JTAG debugging)"
+
+skills_weighted_methodology: >
+  weight = round((count / 7) * 5), the same 1-5 scale as every other
+  track. Built from 7 real, individually fetched, currently-live
+  "Embedded Software Engineer"/"Firmware Engineer" postings (2026-10-20),
+  below the usual 10-15 target despite ~20 search queries and ~18 fetch
+  attempts across many companies (Oura, Verkada, Two Six Technologies,
+  Boston Dynamics, Blue Origin, Medtronic, Roku, iRobot, Sonos,
+  FortifyIQ, OneStopSystems -- all 404, redirected to a generic index
+  with no single-posting page, had zero open roles, or returned
+  unrenderable content, excluded rather than guessed at). Real company
+  concentration, not smoothed over: Zoox alone is 4 of 7 postings (57%)
+  -- it happened to have an unusually large number of distinct embedded
+  sub-team postings open and fetchable this pass, while most other
+  candidate companies' postings were expired or unreachable.
+skills_weighted_sources:
+  - {company: "Anduril Industries", title: "Software Engineer, Intelligence Systems", url: "https://job-boards.greenhouse.io/andurilindustries/jobs/5064165007"}
+  - {company: Zoox, title: "Embedded Software Engineer (Firmware Platforms)", url: "https://jobs.lever.co/zoox/0dd5de4b-4e98-4808-85fd-e739e7fc5bba"}
+  - {company: Zoox, title: "Embedded Software Engineer - Battery Management Systems", url: "https://jobs.lever.co/zoox/082ed20c-b8e1-4b1c-9c22-4738ad94055d"}
+  - {company: Zoox, title: "Embedded Software Engineer - Body Systems", url: "https://jobs.lever.co/zoox/46c23963-2be1-4037-8f1a-ce87bdccde6d"}
+  - {company: Zoox, title: "Embedded Software Engineer - Power Systems", url: "https://jobs.lever.co/zoox/b1bba11f-2b04-4a4a-8095-752c04182af1"}
+  - {company: SpaceX, title: "Wireless Firmware Engineer (Starlink Mobile)", url: "https://boards-api.greenhouse.io/v1/boards/spacex/jobs/8546722002"}
+  - {company: AttoTude, title: "Firmware Engineer", url: "https://job-boards.greenhouse.io/attotude/jobs/4086713009"}
+
+core:
+  - module: "Embedded Systems"
+    module_id: "1215690"
+    ects: 6.0
+    area: hw_sw_systems
+    reason: "The hardware-near systems that run everyday devices (energy-efficient appliances, elevator controls, driver-assistance systems) -- the foundational module the whole track is named after."
+  - module: "Real-Time Systems and Applications"
+    module_id: "1234827"
+    ects: 6.0
+    area: hw_sw_systems
+    reason: "Real-time data processing requirements when a system has to meet hard timing deadlines -- a distinct constraint from embedded systems generally."
+  - module: "Advanced Microcontroller Programming and Debugging"
+    module_id: "1220524"
+    ects: 6.0
+    area: hw_sw_systems
+    reason: "Programming and debugging real microcontrollers directly -- the hands-on, hardware-near complement to the systems-level focus of the other two core modules."
+
+complementary:
+  - module: "Real-Time Operating Systems - Design and Implementation"
+    module_id: "1235414"
+    ects: 6.0
+    area: hw_sw_systems
+    reason: "How a real-time OS differs from a standard one, and how to design and build one -- the systems-software layer every embedded application ultimately runs on."
+  - module: "Formal Methods for Logic Control Software"
+    module_id: "1212666"
+    ects: 6.0
+    area: hw_sw_systems
+    reason: "Application-oriented formal methods for control software -- verification matters especially for embedded systems that control physical devices."
+
+nice_to_have:
+  - module: "Uncertainty in Robotics"
+    module_id: "1222468"
+    ects: 4.0
+    area: ai_data
+    reason: "Mobile robotics, state estimation, and localization under real uncertainty -- a natural extension of embedded/real-time systems into robotics specifically."
+  - module: "Intelligent Sensors Systems for Robotic Applications"
+    module_id: "4012440"
+    ects: 6.0
+    area: null
+    reason: "Sensors as system components -- capacitive, piezoelectric, ultrasonic, thermoelectric -- the physical-world sensing layer embedded systems ultimately have to interface with."
+
+# Not taught by any MSInf elective -- these modules teach embedded and
+# real-time systems concepts at the software/OS level, not the hardware-
+# description tooling a working embedded engineer uses to actually
+# design and verify hardware. Evidence: live O*NET OnLine page for
+# 17-2061.00 "Computer Hardware Engineers" (CC BY 4.0 -- see
+# data/onet/ATTRIBUTION.md).
+practical_skills:
+  - skill: hardware_description_languages
+    why: "No MSInf module teaches describing and simulating digital hardware in a real HDL -- Embedded Systems and the microcontroller module stay at the software/firmware level."
+    evidence: "Verilog, VHDL simulation software, and SystemVerilog are each In Demand for Computer Hardware Engineers, appearing in 12%, 10%, and 8% of 2025 US job postings respectively (O*NET 17-2061.00, Lightcast data)."
+    learn_more_url: "https://www.onetonline.org/link/demand/17-2061.00"
+  - skill: circuit_simulation_tools
+    why: "Simulating a circuit's real electrical behavior before building it is a distinct, practical skill from the systems/software focus of this track's modules."
+    evidence: "SPICE (circuit simulation software) is rated In Demand for Computer Hardware Engineers, appearing in 5% of 2025 US job postings (O*NET 17-2061.00)."
+    learn_more_url: "https://www.onetonline.org/link/demand/17-2061.00"
+  - skill: hardware_interface_standards
+    why: "Real embedded hardware has to actually connect to other hardware over a real standard interface -- a practical integration skill no module in this track covers."
+    evidence: "PCI Express (PCIe) is rated In Demand for Computer Hardware Engineers, appearing in 9% of 2025 US job postings (O*NET 17-2061.00)."
+    learn_more_url: "https://www.onetonline.org/link/demand/17-2061.00"

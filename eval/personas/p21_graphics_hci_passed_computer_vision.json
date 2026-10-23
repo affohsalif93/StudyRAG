@@ -1,0 +1,33 @@
+{
+  "id": "p21_graphics_hci_passed_computer_vision",
+  "name": "Already passed Computer Vision",
+  "description": "Direct contrast with p20, same pattern as machine_learning_engineer's p14/p15 pair: once 'Computer Vision' (the real hard prerequisite) is actually passed, 'Computer Vision 2''s foundation-first warning must disappear entirely. Combined CP-by-area totals stay identical to p20's -- passed + recommended still covers the same 8 modules, just split differently.",
+  "profile": {
+    "interests": ["graphics_hci"],
+    "sub_areas": [],
+    "targets": [
+      {"job_title": "Graphics and HCI Engineer", "track_id": "graphics_and_hci", "sector": "industry", "certainty": "decided"}
+    ],
+    "progress": {
+      "passed": [{"module_id": "1215724", "grade": 1.3}],
+      "current": [],
+      "failed_or_not_taken": []
+    }
+  },
+  "expect": {
+    "core": ["1212310", "1215698"],
+    "complementary": ["1215699", "1211921", "1211909"],
+    "nice_to_have": ["1215862", "1215691"],
+    "excluded": [
+      {"module_id": "1215724", "reason": "already passed"}
+    ],
+    "expected_foundation_first_warnings": {
+      "1211921": []
+    },
+    "rule_check": {
+      "cp_by_area": {"visual_computing_interaction": 46.0},
+      "area_requirement_satisfied": false,
+      "early_master_cap_applies": false
+    }
+  }
+}

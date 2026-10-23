@@ -1,0 +1,67 @@
+[
+  {
+    "id": "mhb_en_wise2026",
+    "name": "MSInf 2023 module handbook (English, WiSe2026 snapshot)",
+    "url": "https://online.rwth-aachen.de/RWTHonline/pl/ui/$ctx;design=pl;header=max;lang=de/wbModhbReport.downloadPublicMHBVersion?pOrgNr=14194&pStpStpNr=1975&pDocNr=16184338",
+    "doc_type": "module_handbook",
+    "version": "MSInf 2023, Revision 2026-10-01",
+    "valid_for": "WiSe2026",
+    "language": "en",
+    "terms_note": null,
+    "local_path": "data/raw/MHB_MSInf_2023_en_WiSe2026.pdf",
+    "content_hash": "74531ab01806f8098bc06f5c1bdb7d108f01211f8b77778991dee60d951e1fd9",
+    "retrieved_at": "2026-10-14"
+  },
+  {
+    "id": "po_master_2023",
+    "name": "Master Informatik Prüfungsordnung 2023",
+    "url": "https://www.rwth-aachen.de/global/show_document.asp?id=aaaaaaaadfeqdnv",
+    "doc_type": "po",
+    "version": "Prüfungsordnungsversion 2023, Gesamtfassung vom 18.09.2025, Amtliche Bekanntmachung Nr. 2025/340",
+    "valid_for": null,
+    "language": "de",
+    "terms_note": null,
+    "local_path": "data/raw/PO_Master_Informatik_2023.pdf",
+    "content_hash": "3916a78cb2b59c1b8262dba8dfddad89811aea2b949e42f30fa18f6909f351e1",
+    "retrieved_at": "2026-10-14"
+  },
+  {
+    "id": "po_bachelor_2022",
+    "name": "Bachelor Informatik Prüfungsordnung 2022",
+    "url": "https://www.rwth-aachen.de/global/show_document.asp?id=aaaaaaaadfeffqs",
+    "doc_type": "po",
+    "version": "Prüfungsordnungsversion 2022, Gesamtfassung vom 18.09.2025, Amtliche Bekanntmachung Nr. 2025/330",
+    "valid_for": null,
+    "language": "de",
+    "terms_note": null,
+    "local_path": "data/raw/PO_Bachelor_Informatik_2022.pdf",
+    "content_hash": "e36d6f3914fb03bb58d768aac7e48a49d32aedaa47b9cdf6d61a029fbdaff374",
+    "retrieved_at": "2026-10-14"
+  },
+  {
+    "id": "uepo_2026_109_de",
+    "name": "Übergreifende Prüfungsordnung (ÜPO), German",
+    "url": "https://www.rwth-aachen.de/global/show_document.asp?id=aaaaaaaadlrxkra",
+    "doc_type": "uepo",
+    "version": "22. Änderungsordnung (Gesamtfassung), Amtliche Bekanntmachung 2026/109, erschienen 23.07.2026",
+    "valid_for": null,
+    "language": "de",
+    "terms_note": null,
+    "local_path": "data/raw/UePO_2026-109_de.pdf",
+    "content_hash": "902d8b8c87b74b921cdbdb97e919279f3a37d36a84b792aa3090e3623df5467b",
+    "retrieved_at": "2026-10-14"
+  },
+  {
+    "id": "uepo_2026_109_en",
+    "name": "Übergreifende Prüfungsordnung (ÜPO), English",
+    "url": "https://www.rwth-aachen.de/global/show_document.asp?id=aaaaaaaadltgioj",
+    "doc_type": "uepo",
+    "version": "Same version as uepo_2026_109_de, English translation",
+    "valid_for": null,
+    "language": "en",
+    "terms_note": null,
+    "local_path": "data/raw/UePO_2026-109_en.pdf",
+    "content_hash": "b384a42f3a6041b9aa58bb4053cf6a4527d5b903269a0d5ee97207f65374c4f9",
+    "retrieved_at": "2026-10-14"
+  }
+]

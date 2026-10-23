@@ -1,0 +1,26 @@
+{
+  "id": "p23_multi_track_merge",
+  "name": "Two targets at once -- cybersecurity and software engineering",
+  "description": "First persona to exercise multi-track merging (step 1 of the design doc's 9-step algorithm, wired 2026-10-20 after it turned out profile.targets[1:] was silently ignored). Three real modules are named by both tracks at different layers -- 'Software Architecture' (cybersecurity nice_to_have, software_engineering core), 'Static Program Analysis' (cybersecurity nice_to_have, software_engineering complementary), and 'Communication Systems Engineering' (cybersecurity complementary, software_engineering nice_to_have) -- a real, three-way test of 'the highest layer wins.' This is also the second persona in the whole suite (after p11) where the area requirement actually comes back satisfied -- merging two tracks genuinely covers 3 areas including theoretical_cs, verified against hand-computed totals before writing this.",
+  "profile": {
+    "interests": ["security", "building_software"],
+    "sub_areas": [],
+    "targets": [
+      {"job_title": "Security Engineer", "track_id": "cybersecurity", "sector": "industry", "certainty": "decided"},
+      {"job_title": "Software Engineer", "track_id": "software_engineering", "sector": "industry", "certainty": "decided"}
+    ],
+    "progress": {"passed": [], "current": [], "failed_or_not_taken": []}
+  },
+  "expect": {
+    "core": ["1211901", "1211900", "1230527", "1235068", "1215684", "1216957"],
+    "complementary": ["1227956", "1231539", "1212349", "1212330", "1211978"],
+    "nice_to_have": [],
+    "excluded": [],
+    "foundation_first_warnings_empty": true,
+    "rule_check": {
+      "cp_by_area": {"ai_data": 6.0, "hw_sw_systems": 30.0, "software_methods_tools": 12.0, "theoretical_cs": 18.0},
+      "area_requirement_satisfied": true,
+      "early_master_cap_applies": false
+    }
+  }
+}

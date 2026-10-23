@@ -1,0 +1,260 @@
+[
+  {
+    "id": 1,
+    "type": "direct_lookup",
+    "question": "How many CP is the Masterarbeit module worth in the Master Informatik program?",
+    "expected_keywords": ["30"],
+    "expected_source_id": "po_master_2023",
+    "expected_paragraph": "4",
+    "expected_absatz": "2"
+  },
+  {
+    "id": 2,
+    "type": "direct_lookup",
+    "question": "In how many of the five Wahlpflicht areas must a Master Informatik student earn at least 12 CP, and which area is mandatory among them?",
+    "expected_keywords": ["3", "Theoretical", "Theoretische"],
+    "expected_source_id": "po_master_2023",
+    "expected_paragraph": "4",
+    "expected_absatz": "2"
+  },
+  {
+    "id": 3,
+    "type": "two_passage_combination",
+    "question": "What is the maximum CP a Bachelor Informatik student may take as early Master modules, and how far into the Bachelor's must they be before starting?",
+    "expected_keywords": ["30", "120"],
+    "expected_source_id": "uepo_2026_109_de",
+    "expected_paragraph": "9",
+    "expected_absatz": "1"
+  },
+  {
+    "id": 4,
+    "type": "citation_accuracy_trap",
+    "question": "Does the Bachelor Informatik PO itself state a numeric cap on early master-module CP?",
+    "expected_keywords": ["no", "ÜPO", "UPO"],
+    "expected_source_id": "po_bachelor_2022",
+    "expected_paragraph": "9",
+    "expected_absatz": "1"
+  },
+  {
+    "id": 5,
+    "type": "version_conflict",
+    "question": "Which document governs the actual CP cap for early master modules — the program-specific PO or the ÜPO?",
+    "expected_keywords": ["ÜPO", "UPO"],
+    "expected_source_id": "uepo_2026_109_de",
+    "expected_paragraph": "9",
+    "expected_absatz": "1"
+  },
+  {
+    "id": 6,
+    "type": "unanswerable",
+    "question": "What are the office hours of the Fachstudienberatung Informatik?",
+    "expected_keywords": ["not found", "don't know", "cannot find", "contact", "examination office"],
+    "expected_source_id": null,
+    "expected_paragraph": null,
+    "expected_absatz": null
+  },
+  {
+    "id": 7,
+    "type": "direct_lookup",
+    "note": "CP is a structured DB field, answered via scripts/../structured_lookup.py (Step 9.2) since 2026-10-16, not retrieval over text — see studyrag-decisions-log.md.",
+    "question": "How many CP is the module 'CSCW and Groupware: Concepts and Systems for Computer Supported Cooperative Work' worth?",
+    "expected_keywords": ["4"],
+    "expected_source_id": "mhb_en_wise2026",
+    "expected_module_id": "1215691"
+  },
+  {
+    "id": 8,
+    "type": "direct_lookup",
+    "note": "CP via structured-field lookup (Step 9.2) — see id 7's note.",
+    "question": "How many CP is 'Graph Decompositions and Algorithmic Applications' worth?",
+    "expected_keywords": ["6"],
+    "expected_source_id": "mhb_en_wise2026",
+    "expected_module_id": "1212710"
+  },
+  {
+    "id": 9,
+    "type": "direct_lookup",
+    "note": "Cycle+language via structured-field lookup (Step 9.2) — see id 7's note.",
+    "question": "In which semester cycle is 'Capital Budgeting' offered, and in which language is it taught?",
+    "expected_keywords": ["winter", "german"],
+    "expected_source_id": "mhb_en_wise2026",
+    "expected_module_id": "8013783"
+  },
+  {
+    "id": 10,
+    "type": "direct_lookup",
+    "note": "Language via structured-field lookup (Step 9.2) — see id 7's note.",
+    "question": "In which language(s) is 'Software Architectures' taught?",
+    "expected_keywords": ["german", "english"],
+    "expected_source_id": "mhb_en_wise2026",
+    "expected_module_id": "1215687"
+  },
+  {
+    "id": 11,
+    "type": "direct_lookup",
+    "note": "CP via structured-field lookup (Step 9.2) — see id 7's note.",
+    "question": "How many CP is 'Knowledge Graphs' worth?",
+    "expected_keywords": ["4"],
+    "expected_source_id": "mhb_en_wise2026",
+    "expected_module_id": "1212675"
+  },
+  {
+    "id": 12,
+    "type": "direct_lookup",
+    "note": "Cycle/rhythm via structured-field lookup (Step 9.2) — see id 7's note.",
+    "question": "How regularly is 'Research Focus Class on Communication Systems' offered according to the handbook?",
+    "expected_keywords": ["irregular"],
+    "expected_source_id": "mhb_en_wise2026",
+    "expected_module_id": "1212347"
+  },
+  {
+    "id": 13,
+    "type": "direct_lookup",
+    "note": "CP via structured-field lookup (Step 9.2) — see id 7's note.",
+    "question": "How many CP is 'Fibre-Reinforced Composites' worth?",
+    "expected_keywords": ["4"],
+    "expected_source_id": "mhb_en_wise2026",
+    "expected_module_id": "4013328"
+  },
+  {
+    "id": 14,
+    "type": "direct_lookup",
+    "note": "CP via structured-field lookup (Step 9.2) — see id 7's note.",
+    "question": "How many CP is 'Discrete Mathematics I' worth?",
+    "expected_keywords": ["9"],
+    "expected_source_id": "mhb_en_wise2026",
+    "expected_module_id": "1113556"
+  },
+  {
+    "id": 15,
+    "type": "direct_lookup",
+    "note": "CP via structured-field lookup (Step 9.2) — see id 7's note.",
+    "question": "How many CP is 'Data Stream Management and Analysis' worth?",
+    "expected_keywords": ["6"],
+    "expected_source_id": "mhb_en_wise2026",
+    "expected_module_id": "1226146"
+  },
+  {
+    "id": 16,
+    "type": "direct_lookup",
+    "question": "What is the maximum page length, excluding appendices, for a written Bachelor's thesis?",
+    "expected_keywords": ["50"],
+    "expected_source_id": "po_bachelor_2022",
+    "expected_paragraph": "15",
+    "expected_absatz": "4"
+  },
+  {
+    "id": 17,
+    "type": "direct_lookup",
+    "question": "What is the maximum page length, excluding appendices, for a written Master's thesis?",
+    "expected_keywords": ["80"],
+    "expected_source_id": "po_master_2023",
+    "expected_paragraph": "13",
+    "expected_absatz": "4"
+  },
+  {
+    "id": 18,
+    "type": "two_passage_combination",
+    "question": "In exceptional cases, by how much can the Master's thesis processing time be extended, and under which provision?",
+    "expected_keywords": ["6", "six", "sechs"],
+    "expected_source_id": "po_master_2023",
+    "expected_paragraph": "13",
+    "expected_absatz": "4"
+  },
+  {
+    "id": 19,
+    "type": "two_passage_combination",
+    "question": "In exceptional cases, by how much can the Bachelor's thesis processing time be extended, and under which provision?",
+    "expected_keywords": ["4", "four", "vier"],
+    "expected_source_id": "po_bachelor_2022",
+    "expected_paragraph": "15",
+    "expected_absatz": "4"
+  },
+  {
+    "id": 20,
+    "type": "two_passage_combination",
+    "question": "How is the Master's final grade computed from the individual module grades, and what special weighting applies to the thesis module?",
+    "expected_keywords": ["credit", "leistungspunkt", "weight", "gewicht"],
+    "expected_source_id": "uepo_2026_109_de",
+    "expected_paragraph": "10",
+    "expected_absatz": "8"
+  },
+  {
+    "id": 21,
+    "type": "version_conflict",
+    "question": "What is the maximum processing time for a Bachelor's thesis, and which document's figure actually applies if two documents give different numbers?",
+    "expected_keywords": ["4", "four", "vier"],
+    "forbidden_keywords": ["3 months", "drei monate", "three months"],
+    "expected_source_id": "po_bachelor_2022",
+    "expected_paragraph": "15",
+    "expected_absatz": "4"
+  },
+  {
+    "id": 22,
+    "type": "citation_accuracy_trap",
+    "question": "Is there any conflict between documents about the maximum processing time for a Master's thesis?",
+    "expected_keywords": ["6", "no conflict", "consistent", "both", "agree"],
+    "forbidden_keywords": [],
+    "expected_source_id": "po_master_2023",
+    "expected_paragraph": "13",
+    "expected_absatz": "4"
+  },
+  {
+    "id": 23,
+    "type": "direct_lookup",
+    "question": "Which module is explicitly excluded from being taken early as a Master's module by a Bachelor Informatik student?",
+    "expected_keywords": ["masterarbeit", "thesis"],
+    "expected_source_id": "po_bachelor_2022",
+    "expected_paragraph": "9",
+    "expected_absatz": "2"
+  },
+  {
+    "id": 24,
+    "type": "unanswerable",
+    "question": "What are the opening hours of the RWTH university library?",
+    "expected_keywords": ["not found", "don't know", "cannot find", "contact", "examination office"],
+    "expected_source_id": null
+  },
+  {
+    "id": 25,
+    "type": "unanswerable",
+    "question": "How much does student housing typically cost near RWTH Aachen?",
+    "expected_keywords": ["not found", "don't know", "cannot find", "contact", "examination office"],
+    "expected_source_id": null
+  },
+  {
+    "id": 26,
+    "type": "unanswerable",
+    "question": "Who is the current dean of the Fakultät für Informatik?",
+    "expected_keywords": ["not found", "don't know", "cannot find", "contact", "examination office"],
+    "expected_source_id": null
+  },
+  {
+    "id": 27,
+    "type": "unanswerable",
+    "question": "What is the deadline to apply for a semester abroad as a Master Informatik student?",
+    "expected_keywords": ["not found", "don't know", "cannot find", "contact", "examination office"],
+    "expected_source_id": null
+  },
+  {
+    "id": 28,
+    "type": "unanswerable",
+    "question": "Which code editor do most RWTH computer science students use?",
+    "expected_keywords": ["not found", "don't know", "cannot find", "contact", "examination office"],
+    "expected_source_id": null
+  },
+  {
+    "id": 29,
+    "type": "unanswerable",
+    "question": "What is the current tuition fee for international students in the Master Informatik program?",
+    "expected_keywords": ["not found", "don't know", "cannot find", "contact", "examination office"],
+    "expected_source_id": null
+  },
+  {
+    "id": 30,
+    "type": "unanswerable",
+    "question": "How do I get a replacement for a lost RWTH student ID card?",
+    "expected_keywords": ["not found", "don't know", "cannot find", "contact", "examination office"],
+    "expected_source_id": null
+  }
+]

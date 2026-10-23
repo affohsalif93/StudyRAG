@@ -1,0 +1,133 @@
+# Two judgment calls worth recording: "further modules from the Morris
+# group" resolved to "Algorithmic Foundations of Datascience" (1216860),
+# the named second module coordinated by Junior-Prof. Christopher
+# Morris alongside "Deep Learning for Structured Data" (core). No MSInf
+# elective teaches model-deployment tooling (MLOps, model serving) --
+# a real coverage gap, addressed in practical_skills rather than papered
+# over with an unrelated module.
+#
+# This is the first track with a genuine hard prerequisite edge inside
+# its own core layer: "Advanced Machine Learning" has a real hard
+# RECOMMENDED_BEFORE edge from "Machine Learning" in the Neo4j graph.
+
+track_id: machine_learning_engineer
+title: Machine learning engineer
+
+skills_weighted:
+  - skill: machine_learning_modeling
+    weight: 5
+    evidence: "8 of 8 postings explicitly ask for building/training/evaluating ML or deep learning models"
+  - skill: applied_ai
+    weight: 4
+    evidence: "7 of 8 postings explicitly ask for broader AI techniques beyond standard supervised ML (LLM fine-tuning, RAG, agentic systems, reinforcement learning)"
+  - skill: data_systems_at_scale
+    weight: 4
+    evidence: "6 of 8 postings explicitly ask for large-scale data infrastructure (data pipelines, streaming features, distributed ETL)"
+
+skills_weighted_methodology: >
+  weight = round((count / 8) * 5), a 1-5 scale, never below 1. Built from 8 real,
+  individually fetched, currently-live "Machine Learning Engineer"/"Research
+  Engineer, ML" postings (2026-10-19) -- sources below. Below the usual 10-15
+  target: roughly 12 other promising leads (Booking.com, Notion, Instacart,
+  Grammarly, Lyft, Shopify, DoorDash, Robinhood, Affirm, Wayfair, and others)
+  turned out closed, removed, or unresolvable to an individual posting page on
+  fetch, and were excluded rather than counted from a search snippet alone.
+  Company concentration is mild compared to other tracks' first-pass samples --
+  Stripe appears twice (2 of 8), the other 6 postings are each a different
+  company (Databricks, Airbnb, Spotify, Figma, Anthropic, Coinbase). All three
+  counts came back high (8/8, 7/8, 6/8) -- a real finding, not softened: modern
+  ML engineering postings genuinely ask for all three skills together far more
+  often than not, so these numbers are less discriminating between the three
+  than, say, software_engineering's were, but that reflects the real 2026 job
+  market for this role, not a methodology shortfall.
+skills_weighted_sources:
+  - {company: Databricks, title: "Senior Applied ML Engineer, ML4Sys", url: "https://boards-api.greenhouse.io/v1/boards/databricks/jobs/8656900002"}
+  - {company: Airbnb, title: "Principal Machine Learning Engineer - LLM Fine-tuning and Optimization", url: "https://boards-api.greenhouse.io/v1/boards/airbnb/jobs/7955579"}
+  - {company: Spotify, title: "Staff Machine Learning Engineer, Personalization", url: "https://jobs.lever.co/spotify/9761af44-be41-43ca-8c01-79cdbb2aef93"}
+  - {company: Figma, title: "Software Engineer - Machine Learning", url: "https://job-boards.greenhouse.io/figma/jobs/5551532004"}
+  - {company: Stripe, title: "Machine Learning Engineer", url: "https://boards-api.greenhouse.io/v1/boards/stripe/jobs/8014859"}
+  - {company: Stripe, title: "Staff Machine Learning Engineer, Financial Connections", url: "https://boards-api.greenhouse.io/v1/boards/stripe/jobs/8148653"}
+  - {company: Anthropic, title: "Research Engineer / Research Scientist, Tokens", url: "https://job-boards.greenhouse.io/anthropic/jobs/4951814008"}
+  - {company: Coinbase, title: "Machine Learning Engineer, CX Intelligence", url: "https://boards-api.greenhouse.io/v1/boards/coinbase/jobs/8031260"}
+
+core:
+  - module: "Machine Learning"
+    module_id: "1215744"
+    ects: 6.0
+    area: ai_data
+    reason: "Probability theory, Bayes decision theory, and discriminative methods -- the foundational statistical-learning concepts every other module in this track builds on."
+  - module: "Advanced Machine Learning"
+    module_id: "1211912"
+    ects: 6.0
+    area: ai_data
+    reason: "Regression, probabilistic graphical models, exact/approximate inference, and deep generative models -- a real hard prerequisite on Machine Learning in the prerequisite graph, not just a naming convention."
+  - module: "Deep Learning for Structured Data"
+    module_id: "1234536"
+    ects: 6.0
+    area: ai_data
+    reason: "Modern deep-learning architectures for structured data (images, sequences, graphs) -- the deep-learning specialization layered on top of Machine Learning's fundamentals."
+
+complementary:
+  - module: "Reinforcement Learning and Learning-based Control"
+    module_id: "4026526"
+    ects: 6.0
+    area: ai_data
+    reason: "Reinforcement learning's relation to control, Markov decision processes, and dynamic programming -- a distinct learning paradigm from supervised ML, with its own real (recommended, not hard) link back to Machine Learning."
+  - module: "Algorithmic Foundations of Datascience"
+    module_id: "1216860"
+    ects: 6.0
+    area: theoretical_cs
+    reason: "Mathematically-grounded algorithmic techniques for data science, from Christopher Morris's group -- a theory-leaning complement to the track's more applied core."
+  - module: "Artificial Intelligence"
+    module_id: "1215694"
+    ects: 6.0
+    area: ai_data
+    reason: "Agent architectures, heuristic search, knowledge representation, and Bayesian networks -- the broader AI foundations an ML engineer needs beyond machine learning specifically."
+
+nice_to_have:
+  - module: "Implementation of Databases"
+    module_id: "1215692"
+    ects: 6.0
+    area: ai_data
+    reason: "How a database engine actually works underneath -- useful grounding for an ML engineer who has to reason about where training and serving data actually lives."
+  - module: "Theory of Distributed Systems"
+    module_id: "1231551"
+    ects: 6.0
+    area: theoretical_cs
+    reason: "Theoretical foundations of distributed systems -- ML training and serving at real scale is fundamentally a distributed-systems problem."
+  - module: "Data Stream Management and Analysis"
+    module_id: "1226146"
+    ects: 6.0
+    area: ai_data
+    reason: "Managing and analyzing streaming data -- the data-systems half of the track draft's 'deployment and data systems' note; the deployment/MLOps half is a real gap no MSInf module covers, addressed in practical_skills instead."
+
+# Not taught by any MSInf elective -- these modules teach ML/AI theory
+# and algorithms, not the hands-on tooling an ML engineer uses daily to
+# actually build, train, and ship models. Evidence: live O*NET OnLine
+# page for 15-2051.00 "Data Scientists" (CC BY 4.0 -- see
+# data/onet/ATTRIBUTION.md), the closest real SOC occupation code to
+# "ML Engineer" (which has no dedicated code of its own), filtered to
+# genuinely practical tooling gaps and grouped under original skill
+# labels, not generic langs/office tools that would just duplicate
+# software_engineering.yaml's own practical_skills.
+practical_skills:
+  - skill: deep_learning_frameworks
+    why: "Deep Learning for Structured Data teaches the architectures and theory; actually building and training models in a real framework is a separate, practical skill."
+    evidence: "PyTorch and TensorFlow are each In Demand for Data Scientists, appearing in 10% and 11% of 2025 US job postings respectively (O*NET 15-2051.00, Lightcast data)."
+    learn_more_url: "https://www.onetonline.org/link/demand/15-2051.00"
+  - skill: python_ml_tooling
+    why: "Machine Learning and Advanced Machine Learning teach the math and algorithms; the everyday Python libraries used to actually implement and manipulate data for them are a separate, practical layer."
+    evidence: "scikit-learn, pandas, and NumPy are each In Demand for Data Scientists, appearing in 9%, 6%, and 5% of 2025 US job postings respectively (O*NET 15-2051.00)."
+    learn_more_url: "https://www.onetonline.org/link/demand/15-2051.00"
+  - skill: large_scale_data_processing
+    why: "Theory of Distributed Systems teaches the theory; running an actual distributed data-processing job is a separate, practical tooling skill."
+    evidence: "Apache Spark and Apache Hadoop are each In Demand for Data Scientists, appearing in 7% and 6% of 2025 US job postings respectively (O*NET 15-2051.00)."
+    learn_more_url: "https://www.onetonline.org/link/demand/15-2051.00"
+  - skill: cloud_data_platforms
+    why: "No MSInf module teaches operating a cloud data platform -- where most real ML training and serving infrastructure actually runs."
+    evidence: "Amazon Web Services and Microsoft Azure software are each In Demand for Data Scientists, appearing in 17% and 13% of 2025 US job postings respectively (O*NET 15-2051.00)."
+    learn_more_url: "https://www.onetonline.org/link/demand/15-2051.00"
+  - skill: bi_and_visualization_tooling
+    why: "Communicating model results to non-technical stakeholders with real BI tooling is a everyday practical skill no MSInf module covers."
+    evidence: "Tableau and Microsoft Power BI are each In Demand for Data Scientists, appearing in 22% and 19% of 2025 US job postings respectively (O*NET 15-2051.00)."
+    learn_more_url: "https://www.onetonline.org/link/demand/15-2051.00"

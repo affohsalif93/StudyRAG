@@ -1,0 +1,23 @@
+{
+  "id": "p04_english_only",
+  "name": "English-taught modules only",
+  "description": "Constraint: can only take modules taught in English. Of the track's 6 modules, only 'Compiler Construction' is German-only ('de') in the real DB -- it should be the sole exclusion, with the exact language-mismatch reason text the engine builds.",
+  "profile": {
+    "interests": ["software_engineering"],
+    "sub_areas": [],
+    "targets": [
+      {"job_title": "Software Engineer", "track_id": "software_engineering", "sector": "industry", "certainty": "leaning"}
+    ],
+    "progress": {"passed": [], "current": [], "failed_or_not_taken": []},
+    "constraints": {"language": ["en"]}
+  },
+  "expect": {
+    "core": ["1215684", "1216957", "1235068"],
+    "complementary": ["1212330"],
+    "nice_to_have": ["1212349"],
+    "excluded": [
+      {"module_id": "1211978", "reason": "language (de) doesn't match ['en']"}
+    ],
+    "foundation_first_warnings_empty": true
+  }
+}

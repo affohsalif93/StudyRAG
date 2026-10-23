@@ -1,0 +1,109 @@
+# Core here is only the software-engineering subset judged to suit
+# scientific computing (Software Architecture, Static Program Analysis);
+# the numerical modules (Numerical Analysis III/IV) stay in Complementary
+# rather than duplicated across both layers.
+#
+# "Numerical Analysis IV" has a genuine hard RECOMMENDED_BEFORE edge
+# from "Numerical Analysis III" -- its own prerequisites field states
+# this formally, not just as recommended background.
+
+track_id: scientific_computing
+title: Scientific and mathematical software engineer
+
+skills_weighted:
+  - skill: numerical_methods_and_scientific_computing
+    weight: 5
+    evidence: "3 of 3 postings explicitly ask for numerical methods/scientific-computing algorithms -- see skills_weighted_methodology for why this count is weak evidence, not strong"
+  - skill: high_performance_computing
+    weight: 5
+    evidence: "3 of 3 postings explicitly ask for HPC/parallel computing (one match was weaker, naming 'high-performance' generically rather than a specific tool like MPI/CUDA)"
+  - skill: scientific_software_design
+    weight: 5
+    evidence: "3 of 3 postings explicitly ask for software-engineering practice applied to scientific code"
+
+skills_weighted_methodology: >
+  weight = round((count / 3) * 5), the same 1-5 scale as every other track, but
+  this number deserves far less confidence than the others. Despite an extensive
+  search (15+ queries across 6 job-title variants -- Scientific Software
+  Engineer, Computational Scientist, Research Software Engineer, HPC Engineer,
+  Numerical Software Engineer, Simulation Software Engineer -- and roughly 25
+  fetch attempts) only 3 real, verified, currently-live postings were found
+  (Synopsys, COMSOL, Constructor Labs); every academic/national-lab posting
+  checked (KIT, Max Planck x3, Institut Laue-Langevin, CSCS, Oak Ridge, KAUST,
+  SISSA, Brown CCV, PNNL, and more) was closed, expired, or already filled.
+  A perfect 3/3 on all three skills at this sample size is a genuine but weak
+  finding, not a confident one -- it does not discriminate between the three
+  skills the way the other tracks' larger samples do, and should not be read
+  as "every real posting for this role always needs all three equally." It
+  reflects that this is a genuinely scarce role in the live job market right
+  now, something worth knowing on its own, not a methodology shortfall to paper
+  over with a bigger but less honest sample.
+skills_weighted_sources:
+  - {company: Synopsys, title: "HPC Software Engineer", url: "https://careers.synopsys.com/job/canonsburg/hpc-software-engineer/44408/87085299616"}
+  - {company: "COMSOL, Inc.", title: "Software Developer - Numerical Algorithms", url: "https://www.comsol.com/company/careers/job/3291"}
+  - {company: "Constructor Labs", title: "Senior Scientific Software Engineer, Simulation and ML", url: "https://job-boards.eu.greenhouse.io/constructorknowledgelabs/jobs/4981061101"}
+
+core:
+  - module: "Software Architecture"
+    module_id: "1235068"
+    ects: 6.0
+    area: software_methods_tools
+    reason: "Architectural decision-making and trade-off analysis -- essential for structuring large scientific-computing codebases, not just general-purpose software."
+  - module: "Static Program Analysis"
+    module_id: "1212330"
+    ects: 6.0
+    area: theoretical_cs
+    reason: "Correctness matters as much as the mathematics behind it -- data-flow analysis and abstract interpretation catch classes of bugs numerical software is especially prone to."
+
+complementary:
+  - module: "Numerical Analysis III"
+    module_id: "1113555"
+    ects: 9.0
+    area: null
+    reason: "Numerical methods for ordinary differential and algebro-differential equations -- the mathematical core of scientific computing."
+  - module: "Numerical Analysis IV"
+    module_id: "1113455"
+    ects: 9.0
+    area: null
+    reason: "Finite-difference methods for PDEs, Krylov-space methods, and optimization/control theory, building directly on Numerical Analysis III per its own formal (hard) prerequisite."
+  - module: "Introduction to Numerical Methods and Software with C++"
+    module_id: "1229154"
+    ects: 6.0
+    area: software_methods_tools
+    reason: "Type-generic procedural programming in C++ applied directly to computer arithmetic and error analysis -- the practical software side of numerical methods, not just the theory."
+
+nice_to_have:
+  - module: "Combinatorial Problems in Scientific Computing"
+    module_id: "1215721"
+    ects: 4.0
+    area: software_methods_tools
+    reason: "Sparse linear systems, iterative algorithms, and matrix factorizations -- the optimization specialization within scientific computing the track draft specifically named."
+
+# Not taught by any MSInf elective -- O*NET has no occupation code
+# exactly matching this hybrid role (neither "Software Developers"
+# 15-1252.00, already used for software_engineering.yaml, nor
+# "Computer and Information Research Scientists" 15-1221.00, which
+# turned out to be almost entirely AI/ML-tooling flavored with no
+# genuine HPC content at all, fit the actual numerical/HPC profile this
+# track is for). "Mathematicians" (15-2021.00) came closest on real
+# inspection -- MATLAB and C++ show up as genuinely relevant, in-demand
+# tools -- but even that occupation's technology-skills data has no
+# HPC-specific tooling (MPI, CUDA, SLURM) at all; flagged here as a
+# real, acknowledged coverage gap in the data source itself, not
+# invented to fill it. Only 3 skills listed, not the usual 5 -- fewer
+# genuinely track-relevant, evidence-backed tools were actually
+# available for this niche occupation, and padding the count with weak
+# matches would be worse than an honestly shorter list.
+practical_skills:
+  - skill: numerical_prototyping_with_matlab
+    why: "Numerical Analysis III/IV teach the mathematical methods; MATLAB is the real tool most working numerical-software engineers prototype and validate those methods in before writing production code."
+    evidence: "The MathWorks MATLAB is rated Hot Technology for Mathematicians, appearing in 16% of 2025 US job postings (O*NET 15-2021.00, Lightcast data)."
+    learn_more_url: "https://www.onetonline.org/link/demand/15-2021.00"
+  - skill: performance_critical_cpp_for_numerical_code
+    why: "Introduction to Numerical Methods and Software with C++ teaches the fundamentals; writing genuinely performance-critical numerical C++ in a production research-software setting is its own deeper practical skill."
+    evidence: "C++ is rated Hot Technology for Mathematicians, appearing in 19% of 2025 US job postings (O*NET 15-2021.00)."
+    learn_more_url: "https://www.onetonline.org/link/demand/15-2021.00"
+  - skill: version_control_for_reproducible_research
+    why: "No MSInf module teaches version control, and it matters differently here than in general software engineering -- tracking changes to research code and data so results stay reproducible, not just coordinating a team's pull requests."
+    evidence: "Version control software is rated In Demand for Mathematicians, appearing in 5% of 2025 US job postings (O*NET 15-2021.00)."
+    learn_more_url: "https://www.onetonline.org/link/demand/15-2021.00"

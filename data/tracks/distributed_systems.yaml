@@ -1,0 +1,105 @@
+# No internal hard prerequisite edge among this track's modules. Two
+# real recommended (soft) edges found, neither triggering a
+# foundation-first warning: "Concepts and Models for Parallel and
+# Data-centric Programming" from "High-Performance Computing", and
+# "Research Focus Class on Communication Systems" from "Advanced
+# Internet Technology" -- neither module is in this track.
+
+track_id: distributed_systems
+title: Distributed systems engineer
+
+skills_weighted:
+  - skill: distributed_systems_design
+    weight: 3
+    evidence: "3 of 5 postings explicitly ask for designing large-scale distributed systems -- a small sample, see skills_weighted_methodology"
+  - skill: network_protocols_and_infrastructure
+    weight: 4
+    evidence: "4 of 5 postings explicitly ask for networking/infrastructure knowledge"
+  - skill: performance_and_scalability_engineering
+    weight: 3
+    evidence: "3 of 5 postings explicitly ask for scalability/performance/reliability engineering"
+
+skills_weighted_methodology: >
+  weight = round((count / 5) * 5), the same 1-5 scale as every other
+  track, but n=5 is well below the usual 10-15 and deserves less
+  confidence, same caution as scientific_computing's own small-sample
+  finding. Searched "Distributed Systems Engineer"/"Infrastructure
+  Engineer"/"Platform Engineer" postings; the dominant failure mode this
+  pass was search engines indexing stale Greenhouse job ids that now
+  redirect to a generic "current openings" board (job closed/filled) --
+  this happened on roughly 15 of ~20 fetch attempts (Redis, Snowflake,
+  Cloudflare, Censys, Discord, xAI, Grafana Labs, PagerDuty, Uber
+  Freight, DigitalOcean, Temporal, MongoDB, Confluent), all excluded
+  rather than scored from a cached search snippet. 5 distinct companies,
+  no repeats -- no company-concentration problem, just a volume one.
+skills_weighted_sources:
+  - {company: Datadog, title: "Senior Software Engineer - Distributed Systems", url: "https://boards-api.greenhouse.io/v1/boards/datadog/jobs/3851927"}
+  - {company: Gusto, title: "Staff Software Engineer, Cloud Infrastructure", url: "https://job-boards.greenhouse.io/gusto/jobs/8250243"}
+  - {company: Arcesium, title: "Senior Site Reliability Engineer - PSRE", url: "https://job-boards.greenhouse.io/arcesiumllc/jobs/4670550007"}
+  - {company: Canonical, title: "Distributed Systems Software Engineer, Python / Go", url: "https://job-boards.greenhouse.io/canonicaljobs/jobs/6768830"}
+  - {company: Anthropic, title: "Staff+ Software Engineer, Infrastructure (Distributed Systems)", url: "https://job-boards.greenhouse.io/anthropic/jobs/4970314008"}
+
+core:
+  - module: "Theory of Distributed Systems"
+    module_id: "1231551"
+    ects: 6.0
+    area: theoretical_cs
+    reason: "Consistency, replication, consensus, and failure -- the theoretical foundation every other module in this track assumes."
+  - module: "Communication Systems Engineering"
+    module_id: "1212349"
+    ects: 6.0
+    area: hw_sw_systems
+    reason: "Protocol design and implementation -- how systems actually talk to each other over a real network."
+  - module: "Concepts and Models for Parallel and Data-centric Programming"
+    module_id: "1216838"
+    ects: 6.0
+    area: software_methods_tools
+    reason: "Parallel-computer architectures and programming models for analyzing large data volumes -- the computational side of distributed systems, not just the networking side."
+
+complementary:
+  - module: "Performance Analysis and Correctness Checking of Parallel Applications"
+    module_id: "1215722"
+    ects: 6.0
+    area: software_methods_tools
+    reason: "Scalability and performance monitoring of real parallel applications -- the practical discipline of knowing whether a distributed system actually works at scale."
+  - module: "Research Focus Class on Communication Systems"
+    module_id: "1212347"
+    ects: 6.0
+    area: hw_sw_systems
+    reason: "Current research in Internet technology -- keeps the track connected to where communication-systems research is actually heading, not just the settled theory."
+
+nice_to_have:
+  - module: "Advanced Network Security"
+    module_id: "1230527"
+    ects: 6.0
+    area: hw_sw_systems
+    reason: "Security is a real-world constraint on any distributed system's design, not an afterthought -- useful breadth beyond this track's core focus."
+  - module: "Web3 & Distributed Ledger Technology"
+    module_id: "1226006"
+    ects: 4.0
+    area: ai_data
+    reason: "Blockchain as a concrete, modern application of the consensus and distributed-coordination problems this track's core already covers theoretically."
+
+# Not taught by any MSInf elective -- these modules teach distributed-
+# systems and networking theory, not the operational tooling a working
+# network/distributed-systems engineer uses daily. Evidence: live O*NET
+# OnLine page for 15-1241.00 "Computer Network Architects" (CC BY 4.0 --
+# see data/onet/ATTRIBUTION.md), filtered to genuinely practical tooling
+# gaps.
+practical_skills:
+  - skill: network_routing_protocols
+    why: "Communication Systems Engineering teaches protocol design conceptually; configuring real Internet-scale routing is a distinct, practical operational skill."
+    evidence: "Border Gateway Protocol (BGP) is rated Hot Technology for Computer Network Architects, appearing in 15% of 2025 US job postings (O*NET 15-1241.00, Lightcast data)."
+    learn_more_url: "https://www.onetonline.org/link/demand/15-1241.00"
+  - skill: firewall_and_perimeter_configuration
+    why: "No MSInf module teaches hands-on firewall/perimeter configuration, even though it's the single most in-demand skill listed for this occupation."
+    evidence: "Firewall software is the top-ranked In Demand skill for Computer Network Architects, appearing in 24% of 2025 US job postings (O*NET 15-1241.00)."
+    learn_more_url: "https://www.onetonline.org/link/demand/15-1241.00"
+  - skill: infrastructure_automation
+    why: "Automating infrastructure configuration at scale (rather than configuring it by hand) is standard practice with no dedicated MSInf module."
+    evidence: "Ansible software and IBM Terraform are each In Demand for Computer Network Architects, appearing in 9% and 6% of 2025 US job postings respectively (O*NET 15-1241.00)."
+    learn_more_url: "https://www.onetonline.org/link/demand/15-1241.00"
+  - skill: cloud_network_platforms
+    why: "Theory of Distributed Systems teaches the theory; most real distributed infrastructure today actually runs on a specific cloud provider's own networking stack."
+    evidence: "Microsoft Azure software and Amazon Web Services software are each In Demand for Computer Network Architects, appearing in 14% and 13% of 2025 US job postings respectively (O*NET 15-1241.00)."
+    learn_more_url: "https://www.onetonline.org/link/demand/15-1241.00"

@@ -1,0 +1,35 @@
+{
+  "id": "p16_scientific_computing_clean_slate",
+  "name": "Clean-slate student, scientific computing track",
+  "description": "The fourth track's first persona, and the second real (non-spurious) foundation-first warning in this suite: 'Numerical Analysis IV' has a genuine hard RECOMMENDED_BEFORE edge from 'Numerical Analysis III' -- backed by that module's own `prerequisites` field explicitly stating Numerical Analysis III must be passed, not just recommended background. cp_by_area also exercises area=null modules correctly: Numerical Analysis III/IV are applied_courses (Mathematics faculty), not electives_informatik, so they contribute nothing to the Informatik-area CP tally -- only the three software_methods_tools/theoretical_cs modules do.",
+  "profile": {
+    "interests": ["scientific_computing"],
+    "sub_areas": [],
+    "targets": [
+      {"job_title": "Scientific Software Engineer", "track_id": "scientific_computing", "sector": "industry", "certainty": "decided"}
+    ],
+    "progress": {"passed": [], "current": [], "failed_or_not_taken": []}
+  },
+  "expect": {
+    "core": ["1235068", "1212330"],
+    "complementary": ["1113555", "1113455", "1229154"],
+    "nice_to_have": ["1215721"],
+    "excluded": [],
+    "expected_foundation_first_warnings": {
+      "1113455": ["1113555"]
+    },
+    "rule_check": {
+      "cp_by_area": {"software_methods_tools": 16.0, "theoretical_cs": 6.0},
+      "area_requirement_satisfied": false,
+      "early_master_cap_applies": false
+    },
+    "weights": {
+      "1235068": "up",
+      "1212330": "down",
+      "1113555": "up",
+      "1113455": "up",
+      "1229154": "up",
+      "1215721": "up"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+[project]
+name = "curriculum-planner"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    # core RAG pipeline
+    "langchain",
+    "langgraph",
+    "langchain-community",
+    # LangChain's OpenAI + Chroma integrations are separate packages now
+    "langchain-openai",
+    "langchain-chroma",
+    # Chair tool-calling agent: web search for re-discovering a chair's
+    # URL when it breaks, needs TAVILY_API_KEY in .env
+    "langchain-tavily",
+    # vector store (pick one to start; Chroma is simplest to run locally)
+    "chromadb",
+    # PDF + web parsing
+    "pypdf",
+    "beautifulsoup4",
+    "requests",
+    # config / secrets
+    "python-dotenv",
+    "pydantic-settings",
+    "fastapi",
+    "uvicorn",
+    "openai",
+    # bare-pipeline vector store: plain NumPy array, not FAISS -- corpus
+    # is ~1000 chunks, brute-force cosine similarity is simpler and
+    # already fast enough; FAISS's indexing buys nothing at this scale.
+    "numpy",
+    # plotting retrieval scores for the abstention threshold
+    "matplotlib",
+    # the elective recommender's prerequisite graph -- the official
+    # driver, not an ORM, matching this project's "plain functions, no
+    # classes" style elsewhere
+    "neo4j",
+    # track files are YAML, human-reviewable without touching code
+    "pyyaml",
+    # /ask rate limiter's shared backend when deployed with more than
+    # one instance
+    "redis>=8.1.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

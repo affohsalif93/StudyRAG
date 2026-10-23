@@ -1,0 +1,649 @@
+{
+  "reports": [
+    {
+      "passed": true,
+      "problems": [],
+      "actual": {
+        "core": [
+          "1216957",
+          "1235068",
+          "1215684"
+        ],
+        "complementary": [
+          "1212330",
+          "1211978"
+        ],
+        "nice_to_have": [
+          "1212349"
+        ]
+      },
+      "excluded_actual": [],
+      "id": "p01_clean_slate",
+      "name": "Clean-slate student, industry-leaning"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "actual": {
+        "core": [
+          "1216957",
+          "1235068"
+        ],
+        "complementary": [
+          "1212330",
+          "1211978"
+        ],
+        "nice_to_have": [
+          "1212349"
+        ]
+      },
+      "excluded_actual": [
+        [
+          "1215684",
+          "already passed"
+        ]
+      ],
+      "id": "p02_passed_one_core",
+      "name": "Already passed one core module"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "actual": {
+        "core": [],
+        "complementary": [
+          "1212330",
+          "1211978"
+        ],
+        "nice_to_have": [
+          "1212349"
+        ]
+      },
+      "excluded_actual": [
+        [
+          "1215684",
+          "already passed"
+        ],
+        [
+          "1216957",
+          "already passed"
+        ],
+        [
+          "1235068",
+          "already passed"
+        ]
+      ],
+      "id": "p03_passed_all_core",
+      "name": "Already passed every core module"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "actual": {
+        "core": [
+          "1216957",
+          "1235068",
+          "1215684"
+        ],
+        "complementary": [
+          "1212330"
+        ],
+        "nice_to_have": [
+          "1212349"
+        ]
+      },
+      "excluded_actual": [
+        [
+          "1211978",
+          "language (de) doesn't match ['en']"
+        ]
+      ],
+      "id": "p04_english_only",
+      "name": "English-taught modules only"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "actual": {
+        "core": [
+          "1216957"
+        ],
+        "complementary": [
+          "1212330",
+          "1211978"
+        ],
+        "nice_to_have": []
+      },
+      "excluded_actual": [
+        [
+          "1212349",
+          "language (en) doesn't match ['de']"
+        ],
+        [
+          "1215684",
+          "language (en) doesn't match ['de']"
+        ],
+        [
+          "1235068",
+          "language (en) doesn't match ['de']"
+        ]
+      ],
+      "id": "p05_german_only",
+      "name": "German-taught modules only"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "actual": {
+        "core": [
+          "1216957"
+        ],
+        "complementary": [
+          "1212330"
+        ],
+        "nice_to_have": []
+      },
+      "excluded_actual": [
+        [
+          "1211978",
+          "already passed"
+        ],
+        [
+          "1212349",
+          "language (en) doesn't match ['de']"
+        ],
+        [
+          "1215684",
+          "language (en) doesn't match ['de']"
+        ],
+        [
+          "1235068",
+          "language (en) doesn't match ['de']"
+        ]
+      ],
+      "id": "p06_passed_and_language",
+      "name": "Passed module that would also fail the language filter"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "id": "p07_no_target",
+      "name": "Quiz abandoned before the job-title stage"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "id": "p08_unknown_track",
+      "name": "Track id with no matching track file"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "actual": {
+        "core": [
+          "1216957",
+          "1235068",
+          "1215684"
+        ],
+        "complementary": [
+          "1212330",
+          "1211978"
+        ],
+        "nice_to_have": [
+          "1212349"
+        ]
+      },
+      "excluded_actual": [],
+      "id": "p09_unrelated_passed_module",
+      "name": "Passed a real module that isn't on this track"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "actual": {
+        "core": [
+          "1215684",
+          "1216957",
+          "1235068"
+        ],
+        "complementary": [
+          "1212330",
+          "1211978"
+        ],
+        "nice_to_have": [
+          "1212349"
+        ]
+      },
+      "excluded_actual": [],
+      "id": "p10_research_lean_weighting",
+      "name": "PhD-leaning student (F56 research/industry weighting)"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "actual": {
+        "core": [
+          "1216957",
+          "1235068",
+          "1215684"
+        ],
+        "complementary": [
+          "1212330",
+          "1211978"
+        ],
+        "nice_to_have": [
+          "1212349"
+        ]
+      },
+      "excluded_actual": [],
+      "id": "p11_area_requirement_satisfied",
+      "name": "Already has real coverage in a third area"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "actual": {
+        "core": [
+          "1211901",
+          "1211900",
+          "1230527"
+        ],
+        "complementary": [
+          "1227956",
+          "1231539",
+          "1212349"
+        ],
+        "nice_to_have": [
+          "1235068",
+          "1212330"
+        ]
+      },
+      "excluded_actual": [],
+      "id": "p12_cybersecurity_clean_slate",
+      "name": "Clean-slate student, cybersecurity track"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "actual": {
+        "core": [],
+        "complementary": [],
+        "nice_to_have": [
+          "1212330"
+        ]
+      },
+      "excluded_actual": [
+        [
+          "1211900",
+          "language (en) doesn't match ['de']"
+        ],
+        [
+          "1211901",
+          "language (en) doesn't match ['de']"
+        ],
+        [
+          "1212349",
+          "language (en) doesn't match ['de']"
+        ],
+        [
+          "1227956",
+          "language (en) doesn't match ['de']"
+        ],
+        [
+          "1230527",
+          "language (en) doesn't match ['de']"
+        ],
+        [
+          "1231539",
+          "language (en) doesn't match ['de']"
+        ],
+        [
+          "1235068",
+          "language (en) doesn't match ['de']"
+        ]
+      ],
+      "id": "p13_cybersecurity_german_only",
+      "name": "German-taught modules only, cybersecurity track"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "actual": {
+        "core": [
+          "1215744",
+          "1211912",
+          "1234536"
+        ],
+        "complementary": [
+          "4026526",
+          "1215694",
+          "1216860"
+        ],
+        "nice_to_have": [
+          "1215692",
+          "1226146",
+          "1231551"
+        ]
+      },
+      "excluded_actual": [],
+      "id": "p14_ml_clean_slate",
+      "name": "Clean-slate student, machine learning engineer track"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "actual": {
+        "core": [
+          "1211912",
+          "1234536"
+        ],
+        "complementary": [
+          "4026526",
+          "1215694",
+          "1216860"
+        ],
+        "nice_to_have": [
+          "1215692",
+          "1226146",
+          "1231551"
+        ]
+      },
+      "excluded_actual": [
+        [
+          "1215744",
+          "already passed"
+        ]
+      ],
+      "id": "p15_ml_passed_machine_learning",
+      "name": "Already passed Machine Learning"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "actual": {
+        "core": [
+          "1235068",
+          "1212330"
+        ],
+        "complementary": [
+          "1113555",
+          "1113455",
+          "1229154"
+        ],
+        "nice_to_have": [
+          "1215721"
+        ]
+      },
+      "excluded_actual": [],
+      "id": "p16_scientific_computing_clean_slate",
+      "name": "Clean-slate student, scientific computing track"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "actual": {
+        "core": [
+          "1215692",
+          "1226146",
+          "1216861"
+        ],
+        "complementary": [
+          "1212675",
+          "1231482",
+          "1231551"
+        ],
+        "nice_to_have": [
+          "1234252",
+          "1212677"
+        ]
+      },
+      "excluded_actual": [],
+      "id": "p17_data_engineering_clean_slate",
+      "name": "Clean-slate student, data engineering track"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "actual": {
+        "core": [
+          "1212349",
+          "1216838",
+          "1231551"
+        ],
+        "complementary": [
+          "1215722",
+          "1212347"
+        ],
+        "nice_to_have": [
+          "1230527",
+          "1226006"
+        ]
+      },
+      "excluded_actual": [],
+      "id": "p18_distributed_systems_clean_slate",
+      "name": "Clean-slate student, distributed systems track"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "actual": {
+        "core": [
+          "1223638",
+          "1212331",
+          "1212343"
+        ],
+        "complementary": [
+          "1212326",
+          "1212338",
+          "1211981"
+        ],
+        "nice_to_have": [
+          "1212645",
+          "1212654"
+        ]
+      },
+      "excluded_actual": [],
+      "id": "p19_theoretical_cs_clean_slate",
+      "name": "Clean-slate student, theoretical computer science track"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "actual": {
+        "core": [
+          "1212310",
+          "1215724",
+          "1215698"
+        ],
+        "complementary": [
+          "1215699",
+          "1211921",
+          "1211909"
+        ],
+        "nice_to_have": [
+          "1215862",
+          "1215691"
+        ]
+      },
+      "excluded_actual": [],
+      "id": "p20_graphics_hci_clean_slate",
+      "name": "Clean-slate student, graphics and HCI track"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "actual": {
+        "core": [
+          "1212310",
+          "1215698"
+        ],
+        "complementary": [
+          "1215699",
+          "1211921",
+          "1211909"
+        ],
+        "nice_to_have": [
+          "1215862",
+          "1215691"
+        ]
+      },
+      "excluded_actual": [
+        [
+          "1215724",
+          "already passed"
+        ]
+      ],
+      "id": "p21_graphics_hci_passed_computer_vision",
+      "name": "Already passed Computer Vision"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "actual": {
+        "core": [
+          "1215690",
+          "1234827",
+          "1220524"
+        ],
+        "complementary": [
+          "1235414",
+          "1212666"
+        ],
+        "nice_to_have": [
+          "1222468",
+          "4012440"
+        ]
+      },
+      "excluded_actual": [],
+      "id": "p22_embedded_systems_clean_slate",
+      "name": "Clean-slate student, embedded systems track"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "actual": {
+        "core": [
+          "1211901",
+          "1211900",
+          "1230527",
+          "1235068",
+          "1216957",
+          "1215684"
+        ],
+        "complementary": [
+          "1227956",
+          "1231539",
+          "1212349",
+          "1212330",
+          "1211978"
+        ],
+        "nice_to_have": []
+      },
+      "excluded_actual": [],
+      "id": "p23_multi_track_merge",
+      "name": "Two targets at once -- cybersecurity and software engineering"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "actual": {
+        "core": [
+          "1216957",
+          "1235068",
+          "1215684"
+        ],
+        "complementary": [
+          "1212330",
+          "1211978"
+        ],
+        "nice_to_have": [
+          "1212349"
+        ]
+      },
+      "excluded_actual": [],
+      "id": "p24_weak_skill_notes",
+      "name": "Flagged weak in a skill the track actually names"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "actual": {
+        "core": [
+          "1212331",
+          "1212343"
+        ],
+        "complementary": [
+          "1212326",
+          "1212338"
+        ],
+        "nice_to_have": [
+          "1212645",
+          "1212654"
+        ]
+      },
+      "excluded_actual": [
+        [
+          "1211981",
+          "only offered as ['written'] exam(s), which you want to avoid"
+        ],
+        [
+          "1223638",
+          "only offered as ['written'] exam(s), which you want to avoid"
+        ]
+      ],
+      "id": "p25_exam_format_avoid_written",
+      "name": "Avoids written exams, theoretical_computer_science track"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "actual": {
+        "core": [
+          "1211901",
+          "1211900",
+          "1230527"
+        ],
+        "complementary": [
+          "1227956",
+          "1231539",
+          "1212349"
+        ],
+        "nice_to_have": [
+          "1235068",
+          "1212330"
+        ]
+      },
+      "excluded_actual": [],
+      "id": "p26_next_semester_flag",
+      "name": "Planning for next summer semester, cybersecurity track"
+    },
+    {
+      "passed": true,
+      "problems": [],
+      "actual": {
+        "core": [
+          "1216957",
+          "1235068",
+          "1215684"
+        ],
+        "complementary": [
+          "1212330",
+          "1211978"
+        ],
+        "nice_to_have": [
+          "1212349"
+        ]
+      },
+      "excluded_actual": [],
+      "id": "p27_cp_budget_note",
+      "name": "Says they still need 100 CP, software engineering track"
+    }
+  ],
+  "summary": {
+    "n_passed": 27,
+    "n_total": 27,
+    "core_precision": 1.0,
+    "core_recall": 1.0,
+    "constraint_violations": 0
+  }
+}

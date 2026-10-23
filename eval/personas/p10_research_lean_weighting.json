@@ -1,0 +1,37 @@
+{
+  "id": "p10_research_lean_weighting",
+  "name": "PhD-leaning student (F56 research/industry weighting)",
+  "description": "sector='research' (F56). Verified against the real engine before writing this (eval/run_personas.py's own philosophy): a research lean tags 'Foundations of Functional Programming' (theoretical_cs) up and the two software_methods_tools core modules down, the exact mirror of p01's industry-lean tags. The core order, though, comes out IDENTICAL to the track's own authored order and to p01's reordered-for-industry baseline being different -- because the track YAML already happens to list the one theoretical_cs core module first, a research lean has nothing to move. That's a real, honest finding (not a bug): this persona checks the correct weight tags are still applied even when the resulting order is unchanged, so 'nothing moved' can't silently mean 'nothing happened'.",
+  "profile": {
+    "interests": ["software_engineering"],
+    "sub_areas": ["programming_language_concepts"],
+    "work_style": {"theory_vs_practice": 1, "exam_formats_avoid": []},
+    "targets": [
+      {"job_title": "Software Engineer", "track_id": "software_engineering", "sector": "research", "certainty": "decided"}
+    ],
+    "progress": {"passed": [], "current": [], "failed_or_not_taken": []}
+  },
+  "expect": {
+    "core": ["1215684", "1216957", "1235068"],
+    "complementary": ["1212330", "1211978"],
+    "nice_to_have": ["1212349"],
+    "excluded": [],
+    "foundation_first_warnings_empty": true,
+    "rule_check": {
+      "cp_by_area": {"theoretical_cs": 18.0, "software_methods_tools": 12.0, "hw_sw_systems": 6.0},
+      "area_requirement_satisfied": false,
+      "early_master_cap_applies": false
+    },
+    "layer_order": {
+      "core": ["1215684", "1216957", "1235068"]
+    },
+    "weights": {
+      "1215684": "up",
+      "1216957": "down",
+      "1235068": "down",
+      "1212330": "up",
+      "1211978": "up",
+      "1212349": "down"
+    }
+  }
+}

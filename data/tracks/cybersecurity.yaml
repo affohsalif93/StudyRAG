@@ -1,0 +1,138 @@
+# Two notes on this track's data:
+# 1. "Advanced Network Security"'s real formal prerequisite is a
+#    Bachelor's-level module named "IT-Security", not either Master's
+#    "IT-Security 1/2" module in this track's own core layer -- so the
+#    Neo4j prerequisite graph correctly finds zero internal edges here.
+# 2. "Advanced Network Security"'s `prerequisites` field is actually an
+#    exclusivity rule ("Security in Mobile Communication" must not be
+#    completed), and that module no longer exists in the current
+#    handbook, so it has no practical effect. The recommender doesn't
+#    model exclusivity constraints yet.
+
+track_id: cybersecurity
+title: Cybersecurity
+
+skills_weighted:
+  - skill: network_security
+    weight: 1
+    evidence: "3 of 17 postings explicitly ask for network security work (firewalls, network security architecture) rather than naming it only as a job-title word"
+  - skill: cryptography
+    weight: 2
+    evidence: "6 of 17 postings explicitly ask for cryptography/PKI/TLS experience, not just \"security\" generically"
+  - skill: vulnerability_assessment_and_analysis
+    weight: 3
+    evidence: "9 of 17 postings explicitly ask for vulnerability assessment, penetration testing, secure code review, or threat/risk analysis"
+
+skills_weighted_methodology: >
+  weight = round((count / 17) * 5), a 1-5 scale, never below 1. Built from 17 real,
+  individually fetched, currently-live "Security Engineer"/"Security Architect"/
+  specialist-title postings (2026-10-19) -- sources below. Collected in two passes:
+  a first pass of 11 postings found via a generic "Security Engineer" search skewed
+  heavily toward one company (GitLab, 8 of 11) and toward corporate/AppSec/
+  vulnerability-management-flavored roles rather than network- or crypto-specialist
+  ones, so network_security and cryptography came back suspiciously low (1/11, 2/11).
+  A second, targeted pass searched narrower specialist titles ("Network Security
+  Engineer", "Security Architect", "Cryptography Engineer", etc.) and explicitly
+  avoided GitLab, adding 6 more postings across 4 different companies (Cloudflare,
+  Zscaler, Twilio, PagerDuty) -- that batch alone scored 2/6 network_security and
+  4/6 cryptography, confirming the first pass's low numbers were a sampling
+  artifact of which job titles got searched, not a real absence of these skills
+  in security engineering. Combined: network_security 3/17, cryptography 6/17,
+  vulnerability_assessment_and_analysis 9/17. GitLab still accounts for 8 of the
+  17 postings (47%) even after the second pass -- a real, acknowledged company
+  concentration, not claimed as a representative cross-industry survey. Every
+  posting was fetched and read individually; 11 additional candidate postings
+  (Cloudflare, Okta, Datadog, Snowflake, Palo Alto Networks, BCG, and three
+  Jobgether-hosted Lever mirrors) were found via search but excluded as closed,
+  404, or otherwise unverifiable, rather than counted on a search snippet alone.
+skills_weighted_sources:
+  - {company: VEIC, title: "Information Security Engineer II", url: "https://jobs.lever.co/veic/493a0911-e30e-45db-abbb-294e0c7610f0"}
+  - {company: Stripe, title: "Security Engineer, Privacy", url: "https://boards-api.greenhouse.io/v1/boards/stripe/jobs/8073092"}
+  - {company: Coinbase, title: "Staff Software Engineer, Security Platform", url: "https://boards-api.greenhouse.io/v1/boards/coinbase/jobs/8167571"}
+  - {company: GitLab, title: "Staff Corporate Security Engineer", url: "https://job-boards.greenhouse.io/gitlab/jobs/8734888002"}
+  - {company: GitLab, title: "Intermediate Security Engineer, SIRT", url: "https://job-boards.greenhouse.io/gitlab/jobs/8782306002"}
+  - {company: GitLab, title: "Intermediate Security Analyst, Vulnerability Operations", url: "https://job-boards.greenhouse.io/gitlab/jobs/8821526002"}
+  - {company: GitLab, title: "Intermediate Software Engineer, Security Factory: Vulnerability Management", url: "https://job-boards.greenhouse.io/gitlab/jobs/8688078002"}
+  - {company: GitLab, title: "Principal Security Researcher", url: "https://job-boards.greenhouse.io/gitlab/jobs/8731718002"}
+  - {company: GitLab, title: "Staff Software Engineer, Security Factory: Static Analysis", url: "https://job-boards.greenhouse.io/gitlab/jobs/8693563002"}
+  - {company: GitLab, title: "Senior Software Engineer, Security Factory: Code Security", url: "https://job-boards.greenhouse.io/gitlab/jobs/8738179002"}
+  - {company: GitLab, title: "Senior Security Engineer, SIRT EMEA", url: "https://job-boards.greenhouse.io/gitlab/jobs/8628447002"}
+  - {company: Cloudflare, title: "Staff/Principal Software Engineer - Security Platform", url: "https://job-boards.greenhouse.io/cloudflare/jobs/7053411"}
+  - {company: Cloudflare, title: "Network Security Engineer", url: "https://job-boards.greenhouse.io/cloudflare/jobs/8081027"}
+  - {company: Cloudflare, title: "IAM Security Engineer", url: "https://job-boards.greenhouse.io/cloudflare/jobs/8157997"}
+  - {company: Zscaler, title: "Architect/Sr. Principal SDE (Layer 7 Security & Proxy)", url: "https://job-boards.greenhouse.io/zscaler/jobs/5239093007"}
+  - {company: Twilio, title: "Senior Security Engineer, Incident Response", url: "https://job-boards.greenhouse.io/twilio/jobs/8065040"}
+  - {company: PagerDuty, title: "Senior Security Engineer - Cloud Security", url: "https://job-boards.greenhouse.io/pagerduty/jobs/6211202004"}
+
+core:
+  - module: "IT-Security 1 - Cryptographic Basics and Network Security"
+    module_id: "1211901"
+    ects: 6.0
+    area: hw_sw_systems
+    reason: "Cryptographic fundamentals (symmetric/asymmetric encryption, integrity protection) and network security basics -- the foundational security knowledge every other module in this track builds on."
+  - module: "IT-Security 2 - Computer Security"
+    module_id: "1211900"
+    ects: 6.0
+    area: hw_sw_systems
+    reason: "System and computer security, building directly on IT-Security 1's cryptographic basics per the module's own stated recommended background."
+  - module: "Advanced Network Security"
+    module_id: "1230527"
+    ects: 6.0
+    area: hw_sw_systems
+    reason: "Cryptographic protocols and security architectures for wireless and wired networks -- the natural depth follow-on to the network-security foundation IT-Security 1/2 establish."
+
+complementary:
+  - module: "Industrial Network Security"
+    module_id: "1227956"
+    ects: 6.0
+    area: hw_sw_systems
+    reason: "Security problems and solutions specific to industrial/OT networks, extending the core security foundation into a distinct, growing specialization."
+  - module: "Industrial Data Security"
+    module_id: "1231539"
+    ects: 6.0
+    area: ai_data
+    reason: "Security problems specific to industrial data pipelines -- its own recommended background explicitly combines IT security, databases, and machine learning."
+  - module: "Communication Systems Engineering"
+    module_id: "1212349"
+    ects: 6.0
+    area: hw_sw_systems
+    reason: "Protocol design and implementation -- the networking basis the track's own draft calls for before specializing into network security."
+
+nice_to_have:
+  - module: "Software Architecture"
+    module_id: "1235068"
+    ects: 6.0
+    area: software_methods_tools
+    reason: "Large-systems design skill useful for reasoning about a system's attack surface holistically, though not this track's main focus."
+  - module: "Static Program Analysis"
+    module_id: "1212330"
+    ects: 6.0
+    area: theoretical_cs
+    reason: "Data-flow analysis and abstract interpretation -- directly useful for vulnerability discovery and secure-code review, the software-side complement to this track's network/systems security core."
+
+# Hands-on security tooling, not taught by any MSInf elective. Evidence:
+# live O*NET OnLine page for 15-1212.00 "Information Security Analysts"
+# (CC BY 4.0, see data/onet/ATTRIBUTION.md), filtered to Hot
+# Technology/In Demand items that are security-specific rather than
+# generic IT tools already covered in software_engineering.yaml.
+practical_skills:
+  - skill: firewall_administration
+    why: "Operating and tuning firewalls is standard security-engineering practice, but IT-Security 1/2 and the Network Security modules teach the protocols and threat models, not hands-on firewall configuration and rule management."
+    evidence: "\"Firewall software\" is the single highest-ranked In Demand skill listed for Information Security Analysts, appearing in 18% of 2025 US job postings (O*NET 15-1212.00, Lightcast data)."
+    learn_more_url: "https://www.onetonline.org/link/demand/15-1212.00"
+  - skill: siem_and_security_monitoring
+    why: "Real-time log analysis and alerting (SIEM) is how incidents actually get detected in practice -- no MSInf module teaches hands-on SIEM operation."
+    evidence: "Splunk Enterprise is rated both Hot Technology and In Demand for Information Security Analysts, appearing in 12% of 2025 US job postings (O*NET 15-1212.00)."
+    learn_more_url: "https://www.onetonline.org/link/summary/15-1212.00"
+  - skill: threat_intelligence_frameworks
+    why: "Structuring real-world attacker tactics and techniques, not just abstract threat models, is a practical SOC/threat-hunting skill this track's theoretical coursework doesn't cover."
+    evidence: "MITRE ATT&CK software is rated In Demand for Information Security Analysts, appearing in 7% of 2025 US job postings (O*NET 15-1212.00)."
+    learn_more_url: "https://www.onetonline.org/link/demand/15-1212.00"
+  - skill: vulnerability_scanning
+    why: "Static Program Analysis teaches code-level analysis theory, but scanning live networks and infrastructure for known vulnerabilities is a separate, practical tooling skill."
+    evidence: "Tenable Nessus is rated In Demand for Information Security Analysts, appearing in 5% of 2025 US job postings (O*NET 15-1212.00)."
+    learn_more_url: "https://www.onetonline.org/link/demand/15-1212.00"
+  - skill: identity_and_access_management
+    why: "Administering directory services and access control -- who can reach what -- is standard enterprise security practice that none of this track's modules teach hands-on."
+    evidence: "Microsoft Active Directory appears in 4% of 2025 US job postings and is rated Hot Technology for Information Security Analysts (O*NET 15-1212.00)."
+    learn_more_url: "https://www.onetonline.org/link/summary/15-1212.00"

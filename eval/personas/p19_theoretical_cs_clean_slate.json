@@ -1,0 +1,25 @@
+{
+  "id": "p19_theoretical_cs_clean_slate",
+  "name": "Clean-slate student, theoretical computer science track",
+  "description": "Seventh track. No internal hard prerequisite edges. The most extreme single-area concentration of any track: all 8 modules are theoretical_cs, so cp_by_area has exactly one key -- real, not a bug, since this track is literally named after that one area. Only 1 of the needed 3 areas ever meets the minimum, no matter what's passed, because the track itself never touches a second area at all -- a structurally different kind of 'not satisfied' than any other track's.",
+  "profile": {
+    "interests": ["theory"],
+    "sub_areas": [],
+    "targets": [
+      {"job_title": "Theoretical Computer Scientist", "track_id": "theoretical_computer_science", "sector": "research", "certainty": "decided"}
+    ],
+    "progress": {"passed": [], "current": [], "failed_or_not_taken": []}
+  },
+  "expect": {
+    "core": ["1223638", "1212331", "1212343"],
+    "complementary": ["1212326", "1212338", "1211981"],
+    "nice_to_have": ["1212645", "1212654"],
+    "excluded": [],
+    "foundation_first_warnings_empty": true,
+    "rule_check": {
+      "cp_by_area": {"theoretical_cs": 50.0},
+      "area_requirement_satisfied": false,
+      "early_master_cap_applies": false
+    }
+  }
+}

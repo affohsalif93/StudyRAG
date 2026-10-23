@@ -1,0 +1,25 @@
+name: CI
+
+# Runs the test suite on every push. Deliberately does NOT build the
+# data pipeline or run a real evaluation -- that needs OPENAI_API_KEY
+# (real cost on every push) and fetching the raw PDFs from RWTH's live
+# URLs (unverified from a CI runner). Everything that doesn't need a
+# real OpenAI-built index runs for real; test_api.py skips cleanly when
+# it isn't available rather than failing.
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v3
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Run tests
+        run: uv run pytest tests/ -v

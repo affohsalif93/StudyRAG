@@ -1,0 +1,67 @@
+O*NET-SOC Code,Title,Element ID,Element Name,Scale ID,Scale Name,Data Value,N,Standard Error,Lower CI Bound,Upper CI Bound,Recommend Suppress,Not Relevant,Date,Domain Source
+15-1252.00,Software Developers,2.C.1.a,Administration and Management,IM,Importance,2.25,22,0.2992,1.6258,2.8703,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.1.a,Administration and Management,LV,Level,2.68,22,0.6230,1.3796,3.9710,N,N,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.1.b,Administrative,IM,Importance,2.12,22,0.2981,1.5051,2.7449,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.1.b,Administrative,LV,Level,2.33,22,0.5444,1.1945,3.4587,N,N,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.1.c,Economics and Accounting,IM,Importance,2.47,22,0.2757,1.9005,3.0472,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.1.c,Economics and Accounting,LV,Level,2.65,22,0.4091,1.8041,3.5055,N,N,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.1.d,Sales and Marketing,IM,Importance,2.19,22,0.4300,1.2930,3.0814,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.1.d,Sales and Marketing,LV,Level,2.05,22,0.7163,0.5608,3.5401,N,N,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.1.e,Customer and Personal Service,IM,Importance,3.56,22,0.2114,3.1155,3.9948,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.1.e,Customer and Personal Service,LV,Level,4.12,22,0.3400,3.4176,4.8316,N,N,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.1.f,Personnel and Human Resources,IM,Importance,2.36,22,0.3430,1.6438,3.0705,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.1.f,Personnel and Human Resources,LV,Level,2.55,22,0.5993,1.3071,3.7998,N,N,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.2.a,Production and Processing,IM,Importance,2.54,22,0.4313,1.6445,3.4385,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.2.a,Production and Processing,LV,Level,2.10,22,0.6366,0.7743,3.4221,N,N,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.2.b,Food Production,IM,Importance,1.12,22,0.1244,1.0000,1.3800,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.2.b,Food Production,LV,Level,0.20,22,0.2073,0.0000,0.6334,Y,Y,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.3.a,Computers and Electronics,IM,Importance,4.75,22,0.1045,4.5368,4.9715,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.3.a,Computers and Electronics,LV,Level,6.23,22,0.2131,5.7858,6.6722,N,N,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.3.b,Engineering and Technology,IM,Importance,2.80,21,0.4641,1.8367,3.7730,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.3.b,Engineering and Technology,LV,Level,3.17,22,0.8153,1.4741,4.8653,N,N,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.3.c,Design,IM,Importance,2.70,22,0.4402,1.7879,3.6188,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.3.c,Design,LV,Level,3.07,22,0.8014,1.3988,4.7320,N,N,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.3.d,Building and Construction,IM,Importance,1.11,22,0.0685,1.0000,1.2510,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.3.d,Building and Construction,LV,Level,0.20,22,0.1296,0.0000,0.4668,Y,Y,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.3.e,Mechanical,IM,Importance,1.41,22,0.3193,1.0000,2.0700,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.3.e,Mechanical,LV,Level,0.68,22,0.5304,0.0000,1.7802,Y,Y,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.4.a,Mathematics,IM,Importance,3.57,22,0.3834,2.7771,4.3716,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.4.a,Mathematics,LV,Level,4.55,22,0.4723,3.5676,5.5321,N,N,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.4.b,Physics,IM,Importance,1.28,22,0.2130,1.0000,1.7242,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.4.b,Physics,LV,Level,0.44,22,0.3240,0.0000,1.1109,Y,Y,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.4.c,Chemistry,IM,Importance,1.24,22,0.2067,1.0000,1.6718,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.4.c,Chemistry,LV,Level,0.35,22,0.2478,0.0000,0.8659,Y,Y,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.4.d,Biology,IM,Importance,1.14,22,0.1100,1.0000,1.3647,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.4.d,Biology,LV,Level,0.18,22,0.1335,0.0000,0.4549,Y,Y,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.4.e,Psychology,IM,Importance,1.60,21,0.3171,1.0000,2.2594,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.4.e,Psychology,LV,Level,1.09,21,0.5865,0.0000,2.3093,Y,N,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.4.f,Sociology and Anthropology,IM,Importance,1.33,22,0.2053,1.0000,1.7544,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.4.f,Sociology and Anthropology,LV,Level,0.55,22,0.3574,0.0000,1.2980,Y,Y,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.4.g,Geography,IM,Importance,1.27,22,0.1432,1.0000,1.5659,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.4.g,Geography,LV,Level,0.48,22,0.2719,0.0000,1.0447,Y,Y,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.5.a,Medicine and Dentistry,IM,Importance,1.00,22,0.0000,,,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.5.a,Medicine and Dentistry,LV,Level,0.00,22,0.0000,,,N,Y,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.5.b,Therapy and Counseling,IM,Importance,1.04,22,0.0415,1.0000,1.1267,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.5.b,Therapy and Counseling,LV,Level,0.16,22,0.1659,0.0000,0.5067,Y,Y,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.6,Education and Training,IM,Importance,2.84,22,0.2482,2.3265,3.3587,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.6,Education and Training,LV,Level,3.74,22,0.4847,2.7340,4.7502,N,N,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.7.a,English Language,IM,Importance,3.27,22,0.5377,2.1500,4.3865,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.7.a,English Language,LV,Level,3.63,22,1.0107,1.5304,5.7341,N,N,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.7.b,Foreign Language,IM,Importance,1.14,22,0.0956,1.0000,1.3403,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.7.b,Foreign Language,LV,Level,0.29,22,0.2026,0.0000,0.7087,Y,Y,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.7.c,Fine Arts,IM,Importance,1.00,22,0.0000,,,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.7.c,Fine Arts,LV,Level,0.00,22,0.0000,,,N,Y,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.7.d,History and Archeology,IM,Importance,1.05,22,0.0429,1.0000,1.1378,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.7.d,History and Archeology,LV,Level,0.15,22,0.1313,0.0000,0.4266,Y,Y,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.7.e,Philosophy and Theology,IM,Importance,1.16,22,0.1010,1.0000,1.3721,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.7.e,Philosophy and Theology,LV,Level,0.41,22,0.2552,0.0000,0.9374,Y,Y,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.8.a,Public Safety and Security,IM,Importance,2.57,22,0.3997,1.7374,3.3998,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.8.a,Public Safety and Security,LV,Level,1.80,22,0.5903,0.5734,3.0285,N,N,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.8.b,Law and Government,IM,Importance,1.74,22,0.3961,1.0000,2.5661,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.8.b,Law and Government,LV,Level,1.14,22,0.5058,0.0909,2.1946,N,N,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.9.a,Telecommunications,IM,Importance,2.62,22,0.4008,1.7891,3.4562,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.9.a,Telecommunications,LV,Level,2.91,22,0.7031,1.4459,4.3704,N,N,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.9.b,Communications and Media,IM,Importance,1.74,22,0.2361,1.2454,2.2273,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.9.b,Communications and Media,LV,Level,1.11,22,0.3336,0.4143,1.8016,N,N,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.10,Transportation,IM,Importance,1.72,22,0.2580,1.1877,2.2609,N,,08/2025,Incumbent
+15-1252.00,Software Developers,2.C.10,Transportation,LV,Level,1.11,22,0.4560,0.1609,2.0576,N,N,08/2025,Incumbent

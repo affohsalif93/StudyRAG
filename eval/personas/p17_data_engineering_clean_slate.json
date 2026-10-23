@@ -1,0 +1,25 @@
+{
+  "id": "p17_data_engineering_clean_slate",
+  "name": "Clean-slate student, data engineering track",
+  "description": "Fifth track added in the 'full collection' pass. No internal hard prerequisite edges on this track (checked directly) -- expects empty foundation_first_warnings throughout, like software_engineering/cybersecurity. cp_by_area spans only 2 of the 5 areas (ai_data, theoretical_cs), with only ai_data clearing the 12 CP minimum -- a real, honest reflection of this track's own area concentration, not a bug.",
+  "profile": {
+    "interests": ["data_systems"],
+    "sub_areas": [],
+    "targets": [
+      {"job_title": "Data Engineer", "track_id": "data_engineering", "sector": "industry", "certainty": "decided"}
+    ],
+    "progress": {"passed": [], "current": [], "failed_or_not_taken": []}
+  },
+  "expect": {
+    "core": ["1215692", "1226146", "1216861"],
+    "complementary": ["1212675", "1231482", "1231551"],
+    "nice_to_have": ["1234252", "1212677"],
+    "excluded": [],
+    "foundation_first_warnings_empty": true,
+    "rule_check": {
+      "cp_by_area": {"ai_data": 38.0, "theoretical_cs": 6.0},
+      "area_requirement_satisfied": false,
+      "early_master_cap_applies": false
+    }
+  }
+}

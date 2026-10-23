@@ -1,0 +1,30 @@
+.venv
+.git
+.github
+__pycache__
+*.pyc
+.pytest_cache
+.ruff_cache
+*.egg-info
+.env
+data/raw/*.pdf
+data/raw/archive
+data/raw/chairs/
+# The API serves from the bare pipeline (numpy + chunk_index.npz), not
+# the LangChain one -- its Chroma store is dev-only, never read at
+# runtime by studyrag.api.app, and would otherwise bloat the image by
+# ~30MB for nothing. Intermediate per-document extraction files and the
+# chair-linking report are build-time artifacts, not runtime inputs.
+data/processed/embeddings/langchain_chroma
+data/processed/extracted
+data/processed/chair_module_links_report.json
+# feedback.db/user_memory.db start empty in a fresh deploy -- runtime-
+# written state, not something to ship from local dev. studyrag.db and
+# the chunk index (both small, fully derived, and genuinely needed at
+# runtime) are deliberately NOT excluded here -- see the Dockerfile's
+# own comment on why they're baked into the image.
+data/feedback.db
+data/user_memory.db
+eval/results_latest*.json
+eval/citation_check_results.json
+eval/abstention_scores.png

@@ -1,0 +1,119 @@
+# Two distinct real modules share a near-identical name; this track
+# means the singular "Software Architecture" (id 1235068), not
+# "Architectures".
+
+track_id: software_engineering
+title: Software engineer
+
+skills_weighted:
+  - skill: software_design
+    weight: 5
+    evidence: "13 of 13 postings explicitly ask for system/software design ability (architecture, design patterns, distributed-systems design)"
+  - skill: programming_language_concepts
+    weight: 1
+    evidence: "3 of 13 postings explicitly ask for CS fundamentals, data structures & algorithms, or a named language paradigm/type system -- a bare list of languages (e.g. \"Go, Python, Rust or similar\") was counted as a tooling/stack signal, not this skill"
+  - skill: program_analysis_and_verification
+    weight: 5
+    evidence: "12 of 13 postings explicitly ask for code review, testing, debugging, or static-analysis practice"
+
+skills_weighted_methodology: >
+  weight = round((count / 13) * 5), a 1-5 scale, never below 1. Each of the 13
+  postings was fetched individually and checked against all 3 skills with the
+  same definitions (see studyrag-decisions-log.md for the per-posting table);
+  no posting was counted from a search snippet alone, and 1 candidate posting
+  was excluded for being unverifiable (JS-rendered, no real content retrievable)
+  rather than guessed. software_design came back a near-ceiling signal (13/13)
+  -- most senior software/backend postings today use some system-design
+  language, so it's a less discriminating count than the other two skills.
+  programming_language_concepts was counted strictly on purpose: this skill
+  means language-level conceptual fluency (what Foundations of Functional
+  Programming / Software Language Engineering / Compiler Construction
+  actually teach), not "knows several languages" -- counted inclusively
+  (any multi-language mention at all), the figure would be roughly 9-10 of 13
+  instead of 3 of 13. Sample skews toward infrastructure/platform companies
+  (Twilio, Grafana Labs, GitLab) -- a real limitation of this one pass, not
+  claimed as a representative cross-industry survey.
+skills_weighted_sources:
+  - {company: Twilio, title: "Senior Software Engineer", url: "https://job-boards.greenhouse.io/twilio/jobs/8015771"}
+  - {company: Twilio, title: "Software Engineer L3 (Email Platform)", url: "https://job-boards.greenhouse.io/twilio/jobs/8009057"}
+  - {company: Twilio, title: "Staff Software Engineer", url: "https://job-boards.greenhouse.io/twilio/jobs/7944328"}
+  - {company: Twilio, title: "Software Engineer (Observability)", url: "https://job-boards.greenhouse.io/twilio/jobs/8108771"}
+  - {company: Twilio, title: "Staff Software Engineer, Fraud", url: "https://job-boards.greenhouse.io/twilio/jobs/7595407"}
+  - {company: "Grafana Labs", title: "Senior Software Engineer - Session Replay", url: "https://job-boards.greenhouse.io/grafanalabs/jobs/6208010004"}
+  - {company: "Grafana Labs", title: "Staff Software/Backend Engineer - Adaptive Telemetry", url: "https://job-boards.greenhouse.io/grafanalabs/jobs/6108384004"}
+  - {company: "Grafana Labs", title: "Staff Backend Engineer - Grafana Alerting", url: "https://job-boards.greenhouse.io/grafanalabs/jobs/6105872004"}
+  - {company: GitLab, title: "Senior Backend Engineer, Core DevOps", url: "https://job-boards.greenhouse.io/gitlab/jobs/8689243002"}
+  - {company: GitLab, title: "Intermediate Backend Engineer, AMER", url: "https://job-boards.greenhouse.io/gitlab/jobs/8773006002"}
+  - {company: GitLab, title: "Senior Backend Engineer (Go), Tenant Scale: Gitaly", url: "https://job-boards.greenhouse.io/gitlab/jobs/8749951002"}
+  - {company: GitLab, title: "Senior Backend Engineer, AI Engineering: Chat", url: "https://job-boards.greenhouse.io/gitlab/jobs/8621733002"}
+  - {company: GitLab, title: "Senior Backend Engineer, Database Excellence (Ruby)", url: "https://job-boards.greenhouse.io/gitlab/jobs/8778943002"}
+
+core:
+  - module: "Foundations of Functional Programming"
+    module_id: "1215684"
+    ects: 6.0
+    area: theoretical_cs
+    reason: "Functional programming (Haskell, higher-order functions, lazy evaluation, monads) is foundational for language-level software engineering work and underlies modern language design."
+  - module: "Software Language Engineering"
+    module_id: "1216957"
+    ects: 6.0
+    area: software_methods_tools
+    reason: "Core language-definition concepts (meta-models, grammars, modern editors) directly needed for building and evolving software tooling and DSLs."
+  - module: "Software Architecture"
+    module_id: "1235068"
+    ects: 6.0
+    area: software_methods_tools
+    reason: "Architectural decision-making, recording, and trade-off analysis from multiple viewpoints — the central large-systems-design skill for a software engineer."
+
+complementary:
+  - module: "Static Program Analysis"
+    module_id: "1212330"
+    ects: 6.0
+    area: theoretical_cs
+    reason: "Data-flow analysis and abstract interpretation deepen the program-analysis/verification side of software quality, supporting the core architecture and language work."
+  - module: "Compiler Construction"
+    module_id: "1211978"
+    ects: 6.0
+    area: theoretical_cs
+    reason: "Lexical/syntactic/semantic analysis and compiler tooling (lex, yacc) is a natural follow-up to Software Language Engineering's language-definition focus."
+
+nice_to_have:
+  - module: "Communication Systems Engineering"
+    module_id: "1212349"
+    ects: 6.0
+    area: hw_sw_systems
+    reason: "Protocol design and implementation knowledge is useful breadth for a software engineer but not core to the track's main skills."
+
+# Not taught by any MSInf elective — modules teach the underlying concepts
+# (software design, distributed systems, databases) but not the specific
+# industry tooling a working software engineer uses daily. Evidence:
+# data/onet/technology_skills_software_developers.csv (O*NET 15-1252.00
+# "Software Developers", CC BY 4.0 — see data/onet/ATTRIBUTION.md),
+# filtered to technologies flagged both Hot Technology and In Demand,
+# then grouped into coherent skill areas with original wording (not
+# O*NET's own text, per their license terms). Programming languages from
+# the same evidence (Python, Java, C++, Go, JavaScript/TypeScript, SQL)
+# are deliberately excluded here — a CS degree already teaches
+# programming languages directly, so they're not a coverage gap the way
+# these tools are.
+practical_skills:
+  - skill: version_control
+    why: "Nearly universal in real software engineering practice, but MSInf coursework doesn't teach Git/GitHub workflows directly — branching, code review via pull requests, resolving merge conflicts."
+    evidence: "Git and GitHub both rated Hot Technology + In Demand for Software Developers (O*NET 15-1252.00)."
+    learn_more_url: "https://www.onetonline.org/link/tt/15-1252.00"
+  - skill: containerization_and_orchestration
+    why: "Packaging and deploying software reliably (Docker, Kubernetes) is standard industry practice that no MSInf module teaches as a practical skill — Software Architecture covers the design theory, not the deployment tooling."
+    evidence: "Docker and Kubernetes both rated Hot Technology + In Demand for Software Developers (O*NET 15-1252.00)."
+    learn_more_url: "https://www.onetonline.org/link/tt/15-1252.00"
+  - skill: ci_cd_and_infrastructure_automation
+    why: "Automating builds, tests, and deployments (e.g. Jenkins, Terraform) is a practical engineering skill with no dedicated MSInf module."
+    evidence: "Jenkins CI and (IBM) Terraform both rated Hot Technology + In Demand for Software Developers (O*NET 15-1252.00)."
+    learn_more_url: "https://www.onetonline.org/link/tt/15-1252.00"
+  - skill: cloud_platforms
+    why: "Most real-world software engineering now runs on a cloud platform (AWS, Azure) — operational knowledge MSInf coursework doesn't cover."
+    evidence: "Amazon Web Services and Microsoft Azure software both rated Hot Technology + In Demand for Software Developers (O*NET 15-1252.00)."
+    learn_more_url: "https://www.onetonline.org/link/tt/15-1252.00"
+  - skill: team_collaboration_tooling
+    why: "Tracking work and coordinating with a team (e.g. JIRA) is an everyday practical skill, distinct from the technical content any module teaches."
+    evidence: "Atlassian JIRA rated Hot Technology + In Demand for Software Developers (O*NET 15-1252.00)."
+    learn_more_url: "https://www.onetonline.org/link/tt/15-1252.00"

@@ -1,0 +1,60 @@
+.idea
+.venv
+
+# internal planning docs, not part of the portfolio-facing repo -- kept
+# locally, just not pushed
+/studyrag-*.md
+/DEPLOYMENT.md
+
+# secrets and local config
+.env
+.env.example
+config.yaml
+
+# downloaded sources and derived data (regenerable from data/raw + the parsing code)
+data/raw/*
+data/processed/*
+data/*.db
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/raw/sources.json
+# hand-researched registry (Step 9.4), not derived/regenerable like the
+# PDFs — no script rebuilds this from scratch, so losing it on a fresh
+# clone would mean re-doing real web research, not just re-running a build
+!data/raw/chairs.json
+# small text audit trail from scripts/refresh_sources.py (Step 8) — kept,
+# unlike the raw PDFs themselves, which stay out of git and re-fetchable
+# from their source URLs (see that file + studyrag-decisions-log.md)
+!data/raw/page_hashes.json
+!data/raw/change_reports/
+!data/raw/change_reports/*.md
+
+# Deploy-prep exception: a cloud build (Render, etc.) clones the git repo
+# fresh and has no access to a local data/ volume, so the Dockerfile's
+# baked-in copy of these two files only works if git actually has them.
+# Still fully derived and regenerable any time (scripts/parse_handbook.py
+# + build_db.py for studyrag.db, build_chunk_index.py for the index) --
+# committed for deployability, not because they stopped being derived
+# data, same reasoning as chairs.json/sources.json above just for a
+# different reason. Both are small (studyrag.db ~3.7MB, the index ~5.5MB).
+!data/studyrag.db
+!data/processed/embeddings/
+!data/processed/embeddings/chunk_index.npz
+!data/processed/embeddings/chunk_index.meta.json
+# Un-ignoring the embeddings/ directory above re-exposed everything else
+# inside it too, including the ~30MB LangChain Chroma store -- excluded
+# again here, explicitly, rather than left to the directory-level rule.
+data/processed/embeddings/langchain_chroma
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# generated eval output (regenerates each run; questions.json itself is tracked)
+eval/results_latest.json
+eval/results_latest_langchain.json
+eval/abstention_scores.png
+eval/citation_check_results.json

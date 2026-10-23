@@ -1,0 +1,38 @@
+{
+  "id": "p14_ml_clean_slate",
+  "name": "Clean-slate student, machine learning engineer track",
+  "description": "First persona to exercise a real, non-spurious foundation-first warning -- every prior persona (software_engineering, cybersecurity) could only prove warnings don't fire spuriously, since neither track has a real internal hard-prerequisite edge. This track does: 'Advanced Machine Learning' has a genuine hard RECOMMENDED_BEFORE edge from 'Machine Learning' in the real Neo4j graph. With nothing passed, that warning must actually fire here, even though 'Machine Learning' is also being recommended in the very same plan (the engine only checks passed_ids, not co-recommendation -- a deliberate, correct design, not a bug).",
+  "profile": {
+    "interests": ["machine_learning"],
+    "sub_areas": [],
+    "targets": [
+      {"job_title": "ML Engineer", "track_id": "machine_learning_engineer", "sector": "industry", "certainty": "decided"}
+    ],
+    "progress": {"passed": [], "current": [], "failed_or_not_taken": []}
+  },
+  "expect": {
+    "core": ["1215744", "1211912", "1234536"],
+    "complementary": ["4026526", "1216860", "1215694"],
+    "nice_to_have": ["1215692", "1231551", "1226146"],
+    "excluded": [],
+    "expected_foundation_first_warnings": {
+      "1211912": ["1215744"]
+    },
+    "rule_check": {
+      "cp_by_area": {"ai_data": 42.0, "theoretical_cs": 12.0},
+      "area_requirement_satisfied": false,
+      "early_master_cap_applies": false
+    },
+    "weights": {
+      "1215744": "up",
+      "1211912": "up",
+      "1234536": "up",
+      "4026526": "up",
+      "1216860": "down",
+      "1215694": "up",
+      "1215692": "up",
+      "1231551": "down",
+      "1226146": "up"
+    }
+  }
+}

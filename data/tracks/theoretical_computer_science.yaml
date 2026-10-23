@@ -1,0 +1,106 @@
+# Not a bundle of unrelated topics standing in for an industry job the
+# way the other eight tracks are. All 8 modules here share the real
+# handbook breadcrumb ["Electives", "Theoretical Computer Science"] --
+# RWTH's own official academic area, not a grouping invented for this
+# project. This track is for a student whose goal is depth within that
+# one area itself -- a thesis or PhD in algorithms/complexity/logic --
+# not a parallel career destination to "Software engineer".
+#
+# No internal hard prerequisite edge among this track's modules.
+#
+# Several of RWTH's own core theory electives are German-taught only
+# (Parameterized Algorithms, Advanced Automata Theory) -- a real
+# property of this track, not a data gap.
+#
+# No practical_skills section here, deliberately: O*NET's methodology
+# is job-posting frequency for a real SOC occupation code, and there is
+# no real industry occupation that is just "prove theorems about
+# complexity classes." The closest occupation checked, Computer and
+# Information Research Scientists (15-1221.00), came back almost
+# entirely applied-AI/ML tooling already used for
+# machine_learning_engineer.yaml, with nothing theory-specific in its
+# technology-skills data.
+
+track_id: theoretical_computer_science
+title: Theoretical computer scientist
+
+skills_weighted:
+  # F53's own method (count real job postings, cite "appears in X of Y
+  # postings") doesn't apply here, full stop -- not "we looked and
+  # happened to find none." This track's goal is a research/PhD path,
+  # not an industry job, so there is no real population of job postings
+  # for F53 to ever count in the first place; running that search at all
+  # was the wrong tool for this track, the same reasoning that already
+  # ruled out O*NET (job-posting *frequency*, a related but distinct
+  # methodology) for this track's practical_skills. weight stays null --
+  # honestly "doesn't apply," not a failed measurement.
+  - {skill: algorithm_design_and_analysis, weight: null, evidence: "Job-posting frequency isn't a meaningful signal for a research/PhD-track goal -- see skills_weighted_methodology."}
+  - {skill: computational_complexity, weight: null, evidence: "Job-posting frequency isn't a meaningful signal for a research/PhD-track goal -- see skills_weighted_methodology."}
+  - {skill: formal_methods_and_logic, weight: null, evidence: "Job-posting frequency isn't a meaningful signal for a research/PhD-track goal -- see skills_weighted_methodology."}
+
+skills_weighted_methodology: >
+  F53 asks "how often does this skill appear in real job postings for this
+  role" -- a question that presupposes a real population of job postings
+  for the role exists. It doesn't here: "theoretical computer scientist"
+  is a research/PhD-track goal (the quiz's own "research institute"/"PhD"
+  sector answer exists for exactly this), not an industry job category
+  with postings to count in the first place. Treating a zero count from
+  that search as informative evidence would have been the actual mistake
+  -- a zero only means something once you've confirmed the thing you're
+  counting could plausibly exist in nonzero amounts. A research pass was
+  still run to confirm this wasn't being assumed away without checking:
+  searched "Research Scientist, Algorithms/Theory" titles across industry
+  labs (Google, Microsoft Research, DeepMind) and UK academic postdoc/
+  faculty postings, and found zero live, verifiable postings -- every lead
+  was closed, JS-walled, or explicitly marked no longer accepting
+  applications. That result is supporting evidence for why this track
+  needed a different approach, not the reason the weights are null -- the
+  methodology itself was the wrong fit for this track from the start, the
+  same reasoning that already ruled out O*NET for this track's
+  practical_skills (see this file's own header comment).
+
+core:
+  - module: "Advanced Algorithmics"
+    module_id: "1223638"
+    ects: 6.0
+    area: theoretical_cs
+    reason: "Approximation algorithms and online algorithms -- central, advanced algorithmic technique beyond what any introductory course covers."
+  - module: "Module Complexity Theory"
+    module_id: "1212331"
+    ects: 6.0
+    area: theoretical_cs
+    reason: "Deterministic, nondeterministic, probabilistic, and parallel computation models and complexity classes -- the formal framework for asking what's actually computable, and how efficiently."
+  - module: "Foundations of Logic Programming"
+    module_id: "1212343"
+    ects: 6.0
+    area: theoretical_cs
+    reason: "Predicate logic, unification, resolution, and the semantics of logic programs -- the formal-methods half of the track's own name."
+
+complementary:
+  - module: "Algorithmic Game Theory"
+    module_id: "1212326"
+    ects: 6.0
+    area: theoretical_cs
+    reason: "Game theory, congestion games, and the price of anarchy -- algorithmic analysis applied to strategic, multi-agent settings rather than single optimization problems."
+  - module: "Parameterized Algorithms"
+    module_id: "1212338"
+    ects: 8.0
+    area: theoretical_cs
+    reason: "A real, structured way to attack NP-hard problems that classical complexity theory calls intractable -- a direct deepening of Module Complexity Theory's own questions."
+  - module: "Advanced Automata Theory"
+    module_id: "1211981"
+    ects: 6.0
+    area: theoretical_cs
+    reason: "Automata minimization, the connection between automata and logic, and automata on infinite structures -- a different formal lens on computation than algorithms or complexity alone."
+
+nice_to_have:
+  - module: "Online Algorithms"
+    module_id: "1212645"
+    ects: 6.0
+    area: theoretical_cs
+    reason: "Algorithms that must decide without seeing the whole input in advance -- paging, scheduling, graph problems -- a distinct algorithmic paradigm worth knowing, not central to the core three."
+  - module: "The Graph Isomorphism Problem"
+    module_id: "1212654"
+    ects: 6.0
+    area: theoretical_cs
+    reason: "One of the most studied open problems in theoretical computer science, examined in real depth -- a focused specialization rather than a general requirement."

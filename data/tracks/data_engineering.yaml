@@ -1,0 +1,125 @@
+# No internal hard prerequisite edge found among this track's modules
+# (checked directly, same as every other track) -- "Research Focus
+# Class on Data Ecosystems" has one real *recommended* (soft) edge from
+# "Data Stream Management and Analysis," which doesn't trigger a
+# foundation-first warning (only `hard` edges do).
+
+track_id: data_engineering
+title: Data engineer
+
+skills_weighted:
+  - skill: data_pipeline_engineering
+    weight: 5
+    evidence: "8 of 8 postings explicitly ask for building/orchestrating real data pipelines (Airflow, ETL/ELT, Dagster, Prefect)"
+  - skill: database_systems_design
+    weight: 3
+    evidence: "5 of 8 postings explicitly ask for schema design, database internals, or warehousing architecture under a strict reading -- 3 more only mention general 'data modeling,' counted as a weaker, borderline match rather than inflating the count"
+  - skill: big_data_processing
+    weight: 2
+    evidence: "4 of 8 postings explicitly ask for a real distributed processing framework (Spark, Flink, EMR) -- the most discriminating of the three counts in this sample"
+
+skills_weighted_methodology: >
+  weight = round((count / 8) * 5), the same 1-5 scale as every other track.
+  Built from 8 real, individually fetched, currently-live "Data Engineer"
+  postings (2026-10-20) -- sources below. Checked ~20 companies' live
+  Greenhouse boards directly; the large majority currently have zero open
+  Data Engineer roles, and ~16 other candidate postings (Notion, Airtable,
+  DoorDash, Dropbox, Pinterest, Plaid, Glassdoor, Webflow, Squarespace,
+  Flexport, Ramp, Carta, Grammarly, Cedar, Ro, Vanta, Deel) were 404/closed/
+  empty on direct fetch and excluded rather than guessed at. Sample skews
+  fintech/vertical-SaaS (Brex, Robinhood, Gusto, Chime, Scale AI) and two
+  companies (Brex, Samsara) each contributed 2 postings for different
+  office locations of the same role -- really 6 distinct companies across
+  8 postings, not 8. database_systems_design's strict-vs-loose reading was
+  the one real judgment call: 3 of the 8 "yes" matches only said "data
+  modeling" generically, not explicit schema/warehousing/internals
+  language -- counted as not matching under the strict reading (5/8, not
+  8/8), consistent with this project's standing preference for the
+  narrower, more honest count over the flattering one (see
+  software_engineering.yaml's programming_language_concepts for the same
+  call made the same way).
+skills_weighted_sources:
+  - {company: Brex, title: "Data Engineer", url: "https://www.brex.com/careers/8523806002"}
+  - {company: Brex, title: "Data Engineer", url: "https://www.brex.com/careers/8366850002"}
+  - {company: Robinhood, title: "Senior Software Engineer, Data Engineering", url: "https://job-boards.greenhouse.io/robinhood/jobs/4738660"}
+  - {company: Gusto, title: "Senior Data Engineer", url: "https://job-boards.greenhouse.io/gusto/jobs/8099751"}
+  - {company: Chime, title: "Senior Software Engineer, Data Engineering", url: "https://job-boards.greenhouse.io/chime/jobs/8505462002"}
+  - {company: Samsara, title: "Data Engineer (Remote-Canada)", url: "https://www.samsara.com/company/careers/roles/8250423"}
+  - {company: Samsara, title: "Data Engineer (Remote-US)", url: "https://www.samsara.com/company/careers/roles/8141959"}
+  - {company: "Scale AI", title: "Senior Data Engineer, Public Sector", url: "https://job-boards.greenhouse.io/scaleai/jobs/4713597005"}
+
+core:
+  - module: "Implementation of Databases"
+    module_id: "1215692"
+    ects: 6.0
+    area: ai_data
+    reason: "How a database engine actually works underneath -- transaction processing, query execution, storage -- the engineering core of the role, not just how to write a query."
+  - module: "Data Stream Management and Analysis"
+    module_id: "1226146"
+    ects: 6.0
+    area: ai_data
+    reason: "Managing and analyzing data in motion, not just at rest -- a core modern data-engineering problem alongside traditional database systems."
+  - module: "Introduction to Data Science"
+    module_id: "1216861"
+    ects: 6.0
+    area: ai_data
+    reason: "Real-life datasets and tools, hands-on -- the practical counterpart to the systems-internals focus of the other two core modules."
+
+complementary:
+  - module: "Knowledge Graphs"
+    module_id: "1212675"
+    ects: 4.0
+    area: ai_data
+    reason: "Representing data as entities and relationships rather than tables -- an increasingly common data model behind modern data-driven applications."
+  - module: "Research Focus Class on Data Ecosystems"
+    module_id: "1231482"
+    ects: 6.0
+    area: ai_data
+    reason: "Current research on how data systems interconnect at the ecosystem level, beyond any single database -- a real (soft) link back to Data Stream Management and Analysis's own concepts."
+  - module: "Theory of Distributed Systems"
+    module_id: "1231551"
+    ects: 6.0
+    area: theoretical_cs
+    reason: "Real-world data systems are distributed by default at scale -- the theoretical foundation for reasoning about consistency, replication, and failure that any data engineer eventually needs."
+
+nice_to_have:
+  - module: "Information Visualization"
+    module_id: "1234252"
+    ects: 6.0
+    area: ai_data
+    reason: "Methods for visually representing data so complex information is actually understandable -- the presentation layer on top of everything else this track teaches."
+  - module: "Privacy Enhancing Technologies for Data Science"
+    module_id: "1212677"
+    ects: 4.0
+    area: ai_data
+    reason: "Current research on applying privacy-enhancing techniques to data pipelines -- a growing responsibility for anyone building the systems that hold real data."
+
+# Not taught by any MSInf elective -- these modules teach database and
+# data-systems theory, not the specific cloud/pipeline tooling a working
+# data engineer operates daily. Evidence: live O*NET OnLine page for
+# 15-1242.00 "Database Administrators and Architects" (CC BY 4.0 -- see
+# data/onet/ATTRIBUTION.md), filtered to genuinely practical tooling
+# gaps, excluding plain SQL (62% -- already the direct subject of
+# Implementation of Databases) and generic cloud/office tools that would
+# just duplicate other tracks' own practical_skills.
+practical_skills:
+  - skill: cloud_data_warehousing
+    why: "Implementation of Databases teaches engine internals, not operating a real managed cloud data warehouse at scale."
+    evidence: "Snowflake is rated In Demand for Database Administrators and Architects, appearing in 16% of 2025 US job postings (O*NET 15-1242.00, Lightcast data)."
+    learn_more_url: "https://www.onetonline.org/link/demand/15-1242.00"
+  - skill: streaming_data_platforms
+    why: "Data Stream Management and Analysis teaches the theory of data in motion; running a real streaming platform in production is a separate, practical tooling skill."
+    evidence: "Apache Kafka is rated In Demand for Database Administrators and Architects, appearing in 10% of 2025 US job postings (O*NET 15-1242.00)."
+    learn_more_url: "https://www.onetonline.org/link/demand/15-1242.00"
+  - skill: data_pipeline_orchestration
+    why: "No MSInf module teaches scheduling and orchestrating real data pipelines end to end."
+    evidence: "Apache Airflow is rated In Demand for Database Administrators and Architects, appearing in 9% of 2025 US job postings (O*NET 15-1242.00)."
+    learn_more_url: "https://www.onetonline.org/link/demand/15-1242.00"
+  - skill: big_data_processing_frameworks
+    why: "Processing data at a scale beyond a single machine with a real distributed framework is a practical skill distinct from Theory of Distributed Systems' theoretical treatment."
+    evidence: "Apache Spark and Apache Hadoop are each In Demand for Database Administrators and Architects, appearing in 13% and 8% of 2025 US job postings respectively (O*NET 15-1242.00)."
+    learn_more_url: "https://www.onetonline.org/link/demand/15-1242.00"
+  - skill: etl_integration_tooling
+    why: "Moving and transforming data between real systems with dedicated integration tooling is everyday data-engineering practice no module covers."
+    evidence: "Informatica software is rated In Demand for Database Administrators and Architects, appearing in 8% of 2025 US job postings (O*NET 15-1242.00)."
+    learn_more_url: "https://www.onetonline.org/link/demand/15-1242.00"

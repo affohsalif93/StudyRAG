@@ -1,0 +1,25 @@
+{
+  "id": "p22_embedded_systems_clean_slate",
+  "name": "Clean-slate student, embedded systems track",
+  "description": "Ninth and last track in the 'full collection' pass. No internal hard prerequisite edges. 'Intelligent Sensors Systems for Robotic Applications' is a real applied_courses (Mechanical Engineering) module -- area null, contributing nothing to the Informatik-area CP tally, same structural pattern as scientific_computing's Numerical Analysis III/IV, checked directly rather than assumed.",
+  "profile": {
+    "interests": ["embedded"],
+    "sub_areas": [],
+    "targets": [
+      {"job_title": "Embedded Systems Engineer", "track_id": "embedded_systems", "sector": "industry", "certainty": "decided"}
+    ],
+    "progress": {"passed": [], "current": [], "failed_or_not_taken": []}
+  },
+  "expect": {
+    "core": ["1215690", "1234827", "1220524"],
+    "complementary": ["1235414", "1212666"],
+    "nice_to_have": ["1222468", "4012440"],
+    "excluded": [],
+    "foundation_first_warnings_empty": true,
+    "rule_check": {
+      "cp_by_area": {"ai_data": 4.0, "hw_sw_systems": 30.0},
+      "area_requirement_satisfied": false,
+      "early_master_cap_applies": false
+    }
+  }
+}
